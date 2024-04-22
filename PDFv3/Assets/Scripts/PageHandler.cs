@@ -38,13 +38,13 @@ public class PageHandler : MonoBehaviour
     {
         if (p < pages.Length - 1) { p += 1; }
         else p = 0;
-       SetImage(p);
+        SetImage(p);
     }
 
     public void LastPage()
     {
         if (p > 0) { p -= 1; }
-        else p = pages.Length-1;
+        else p = pages.Length - 1;
         SetImage(p);
     }
 
@@ -60,12 +60,12 @@ public class PageHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

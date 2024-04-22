@@ -7,13 +7,18 @@ public class HoverScript : MonoBehaviour
     public float duration = 0.12f; // Very short duration for a snappy grow effect
     private Vector3 originalScale;
     private Coroutine currentCoroutine; // To keep track of the current animation
-    private int defaultLayer = 0; // To store the original layer
-    private int popoutLayer = 6; // The layer to switch to when growing
+
+
+    private Canvas canvas;
+    private int originalSortingOrder;
 
     void Start()
     {
         originalScale = transform.localScale;
-        gameObject.layer = defaultLayer; 
+        canvas = GetComponent<Canvas>();
+        canvas.sortingOrder = 0;
+        originalSortingOrder = canvas.sortingOrder;
+
     }
 
     public void growP()
@@ -22,11 +27,13 @@ public class HoverScript : MonoBehaviour
         {
             StopCoroutine(currentCoroutine);
         }
-        gameObject.layer = popoutLayer; // Switch to Popout layer
         float rs = scaleFactor - 1;
         rs = (float)(rs / 5);
         rs += 1;
         //GetComponent<PageHighlighter>().GrowRect(rs, duration);
+
+        canvas.sortingOrder = originalSortingOrder + 1;
+
         currentCoroutine = StartCoroutine(ScaleOverTime(originalScale * scaleFactor, duration));
     }
 
@@ -38,7 +45,9 @@ public class HoverScript : MonoBehaviour
         }
         float d = (float)(duration * 1.5);
         //GetComponent<PageHighlighter>().ShrinkRect(d);
-        gameObject.layer = defaultLayer; // Switch back to Default layer
+
+        canvas.sortingOrder = originalSortingOrder;
+
         currentCoroutine = StartCoroutine(ScaleOverTime(originalScale, duration));
     }
     public void quickSP()
@@ -47,9 +56,9 @@ public class HoverScript : MonoBehaviour
         {
             StopCoroutine(currentCoroutine);
         }
-        gameObject.layer = defaultLayer;
         transform.localScale = originalScale;
         //GetComponent<PageHighlighter>().QuickShrinkRect();
+        canvas.sortingOrder = originalSortingOrder;
 
     }
 
@@ -66,10 +75,5 @@ public class HoverScript : MonoBehaviour
         }
 
         transform.localScale = targetScale;
-        // Ensure the layer is set back to Default after growing
-        if (targetScale == originalScale)
-        {
-            gameObject.layer = defaultLayer;
-        }
     }
 }
