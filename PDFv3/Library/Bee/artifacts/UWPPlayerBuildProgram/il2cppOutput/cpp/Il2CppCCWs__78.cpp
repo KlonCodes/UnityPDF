@@ -12,18 +12,18 @@
 #include "utils/New.h"
 
 
-struct IEqualityComparer_1_tEB1D4053184465C7EE16EB538DF9CBD51D98D1FE;
-struct IEqualityComparer_1_t3809FD4BD84F2992AED7F52C0629D6BC3A2517E4;
-struct IEqualityComparer_1_t4CD4A8D98E11FEDBFD38140D9FA9928032455E96;
-struct IEqualityComparer_1_t32DF9FB8495A89FC8BD6E11E4E200FFF7AD54C13;
-struct IEqualityComparer_1_t071E9FEB0707CD152B7B221F10820B4C2887B396;
-struct IEqualityComparer_1_tC938E2389BB59F2D9CBD634ABDFA40E83B698EA7;
-struct SlotU5BU5D_tD663BF3FB83372D2C6E2F997F529D3A77B438A1C;
-struct SlotU5BU5D_tB7A522D508B75B7D113E81A89B97F1A6078DD66C;
-struct SlotU5BU5D_t99800019B3C43EE5E63E808B5DD2CA8E45FE81AB;
-struct SlotU5BU5D_t41B57CD6949F574162928A5C25496CD4C21AA892;
-struct SlotU5BU5D_t4785639355BD1C4B7AF6034C884CE804FECD00FD;
-struct SlotU5BU5D_t98EC70967744D18EEDBF8C3C0FB64A9E595239BB;
+struct IEqualityComparer_1_t121EC9F4FDBEE80ADB035268A0E5A66DC3328BB9;
+struct IEqualityComparer_1_t2CBC1E01F8DDF83EBED512F498266114532DD927;
+struct IEqualityComparer_1_t6525889813DFF86CC8F8BBE7FFAADF4BB795786F;
+struct IEqualityComparer_1_t2E0E0534896DB9396DFD1B0869A9CE5D511E6139;
+struct IEqualityComparer_1_t307BEBB417BA7145693BD12BE1CB32F7C5EF4F0E;
+struct IEqualityComparer_1_tE07E55CA1B6313FD9AAEFCF707E6F2EC0C7B0791;
+struct SlotU5BU5D_t11B105DE1A078017A5279CD579C6D3C07BCDC4BD;
+struct SlotU5BU5D_t056AB4465CFC0A3D07F7C0975B7EE25ED67AB270;
+struct SlotU5BU5D_tEF7B9D36C3E6AB149193249797D2CC5C2F254176;
+struct SlotU5BU5D_tEE5E364CAA66A50E178D7D591004788918CD88A5;
+struct SlotU5BU5D_tE1B2FEC2106EA3CF2EA32F12BF7514A57F3E7E46;
+struct SlotU5BU5D_t144972E8AC5437DF4010E5FC5B41420CA82B7806;
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 struct SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37;
 
@@ -43,10 +43,10 @@ struct NOVTABLE IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C : Il
 	static const Il2CppGuid IID;
 	virtual il2cpp_hresult_t STDCALL IBindableIterable_First_mE23AC28EC9ADCDD2688247217CF40C800E780B97(IBindableIterator_t63CCD2268CEE8AFAB68518869D47C5BDAF72962F** comReturnValue) = 0;
 };
-struct HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601  : public RuntimeObject
+struct HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A  : public RuntimeObject
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
-	SlotU5BU5D_tD663BF3FB83372D2C6E2F997F529D3A77B438A1C* ____slots;
+	SlotU5BU5D_t11B105DE1A078017A5279CD579C6D3C07BCDC4BD* ____slots;
 	int32_t ____count;
 	int32_t ____lastIndex;
 	int32_t ____freeList;
@@ -54,10 +54,10 @@ struct HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601  : public RuntimeObje
 	int32_t ____version;
 	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
 };
-struct HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4  : public RuntimeObject
+struct HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE  : public RuntimeObject
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
-	SlotU5BU5D_tB7A522D508B75B7D113E81A89B97F1A6078DD66C* ____slots;
+	SlotU5BU5D_t056AB4465CFC0A3D07F7C0975B7EE25ED67AB270* ____slots;
 	int32_t ____count;
 	int32_t ____lastIndex;
 	int32_t ____freeList;
@@ -65,10 +65,10 @@ struct HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4  : public RuntimeObje
 	int32_t ____version;
 	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
 };
-struct HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF  : public RuntimeObject
+struct HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F  : public RuntimeObject
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
-	SlotU5BU5D_t99800019B3C43EE5E63E808B5DD2CA8E45FE81AB* ____slots;
+	SlotU5BU5D_tEF7B9D36C3E6AB149193249797D2CC5C2F254176* ____slots;
 	int32_t ____count;
 	int32_t ____lastIndex;
 	int32_t ____freeList;
@@ -76,10 +76,10 @@ struct HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF  : public RuntimeObje
 	int32_t ____version;
 	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
 };
-struct HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA  : public RuntimeObject
+struct HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB  : public RuntimeObject
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
-	SlotU5BU5D_t41B57CD6949F574162928A5C25496CD4C21AA892* ____slots;
+	SlotU5BU5D_tEE5E364CAA66A50E178D7D591004788918CD88A5* ____slots;
 	int32_t ____count;
 	int32_t ____lastIndex;
 	int32_t ____freeList;
@@ -87,10 +87,10 @@ struct HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA  : public RuntimeObje
 	int32_t ____version;
 	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
 };
-struct HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF  : public RuntimeObject
+struct HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88  : public RuntimeObject
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
-	SlotU5BU5D_t4785639355BD1C4B7AF6034C884CE804FECD00FD* ____slots;
+	SlotU5BU5D_tE1B2FEC2106EA3CF2EA32F12BF7514A57F3E7E46* ____slots;
 	int32_t ____count;
 	int32_t ____lastIndex;
 	int32_t ____freeList;
@@ -98,10 +98,10 @@ struct HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF  : public RuntimeObje
 	int32_t ____version;
 	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
 };
-struct HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B  : public RuntimeObject
+struct HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51  : public RuntimeObject
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
-	SlotU5BU5D_t98EC70967744D18EEDBF8C3C0FB64A9E595239BB* ____slots;
+	SlotU5BU5D_t144972E8AC5437DF4010E5FC5B41420CA82B7806* ____slots;
 	int32_t ____count;
 	int32_t ____lastIndex;
 	int32_t ____freeList;
@@ -117,9 +117,9 @@ il2cpp_hresult_t IBindableIterable_First_mE23AC28EC9ADCDD2688247217CF40C800E780B
 
 
 
-struct HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
+struct HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
 {
-	inline HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601_ComCallableWrapper>(obj) {}
+	inline HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -200,20 +200,20 @@ struct HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601_ComCallableWrapper IL
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_t6B8E4B90487F48FD475841A041733E061ED91601_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_tADAD4C89A6A8F0BD8D329BBB797A328CAE3C6E7A_ComCallableWrapper(obj));
 }
 
-struct HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
+struct HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
 {
-	inline HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4_ComCallableWrapper>(obj) {}
+	inline HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -294,20 +294,20 @@ struct HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4_ComCallableWrapper IL
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_t5FDAD6BC622C104F1A0DA3CEB8A2DE92B6F3E9C4_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE_ComCallableWrapper(obj));
 }
 
-struct HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
+struct HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
 {
-	inline HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF_ComCallableWrapper>(obj) {}
+	inline HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -388,20 +388,20 @@ struct HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF_ComCallableWrapper IL
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_tD23C14FE172DE7F2894A3E41903EDCA5C6172BAF_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_tBCFB2B06108D7A6876EAD5A93088CBDE8EEA646F_ComCallableWrapper(obj));
 }
 
-struct HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
+struct HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
 {
-	inline HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA_ComCallableWrapper>(obj) {}
+	inline HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -482,20 +482,20 @@ struct HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA_ComCallableWrapper IL
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_tD16DB16744583923DBA6121E41DB33AC7265C4AA_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_t522E132FB97D3DFC133EC0425A8AEEC871936AAB_ComCallableWrapper(obj));
 }
 
-struct HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
+struct HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
 {
-	inline HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF_ComCallableWrapper>(obj) {}
+	inline HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -576,20 +576,20 @@ struct HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF_ComCallableWrapper IL
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_t393CE008A524DA1CCED603B4564BFAB7574A9EDF_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_t442C406BB3DAA0091640BF5E45C6E255DCE9BC88_ComCallableWrapper(obj));
 }
 
-struct HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
+struct HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
 {
-	inline HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B_ComCallableWrapper>(obj) {}
+	inline HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -670,13 +670,13 @@ struct HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B_ComCallableWrapper IL
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_t363C9122BFA49D682A5E9E8935229B0089922C5B_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) HashSet_1_tCD02D5CE315B62C38C79849CEDE398CD715CCA51_ComCallableWrapper(obj));
 }

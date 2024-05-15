@@ -3513,11 +3513,11 @@ struct XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772  : public XR
 	float ___m_CurrentAttachEaseTime;
 	int32_t ___m_CurrentMovementType;
 	bool ___m_DetachInLateUpdate;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_DetachVelocity;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_DetachLinearVelocity;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_DetachAngularVelocity;
 	int32_t ___m_ThrowSmoothingCurrentFrame;
 	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___m_ThrowSmoothingFrameTimes;
-	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_ThrowSmoothingVelocityFrames;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_ThrowSmoothingLinearVelocityFrames;
 	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_ThrowSmoothingAngularVelocityFrames;
 	bool ___m_ThrowSmoothingFirstUpdate;
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___m_LastThrowReferencePose;
@@ -3525,8 +3525,8 @@ struct XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772  : public XR
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___m_Rigidbody;
 	bool ___m_WasKinematic;
 	bool ___m_UsedGravity;
-	float ___m_OldDrag;
-	float ___m_OldAngularDrag;
+	float ___m_OldLinearDamping;
+	float ___m_OldAngularDamping;
 	bool ___m_IgnoringCharacterCollision;
 	bool ___m_StopIgnoringCollisionInLateUpdate;
 	CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* ___m_SelectingCharacterController;
@@ -7117,36 +7117,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSocketInteractor_OnSelectExited_mEF11F
 	{
 		SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A* L_0 = ___0_args;
 		XRBaseInteractor_OnSelectExited_mF549A06BF8301DC612AA2514EC4C781869DAC0E5(__this, L_0, NULL);
-		bool L_1 = __this->___m_HoverSocketSnapping;
-		if (!L_1)
+		SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A* L_1 = ___0_args;
+		NullCheck(L_1);
+		RuntimeObject* L_2;
+		L_2 = SelectExitEventArgs_get_interactableObject_mDF1FCDA090159514365D791FB3DFA9A7CFE634B6(L_1, NULL);
+		V_0 = ((XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772*)IsInstClass((RuntimeObject*)L_2, XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772_il2cpp_TypeInfo_var));
+		XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772* L_3 = V_0;
+		if (!L_3)
 		{
-			goto IL_0010;
+			goto IL_001e;
 		}
 	}
 	{
-		return;
-	}
-
-IL_0010:
-	{
-		SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A* L_2 = ___0_args;
-		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = SelectExitEventArgs_get_interactableObject_mDF1FCDA090159514365D791FB3DFA9A7CFE634B6(L_2, NULL);
-		V_0 = ((XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772*)IsInstClass((RuntimeObject*)L_3, XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772_il2cpp_TypeInfo_var));
 		XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772* L_4 = V_0;
-		if (!L_4)
-		{
-			goto IL_0027;
-		}
-	}
-	{
-		XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772* L_5 = V_0;
-		bool L_6;
-		L_6 = VirtualFuncInvoker1< bool, XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772* >::Invoke(104, __this, L_5);
+		bool L_5;
+		L_5 = VirtualFuncInvoker1< bool, XRGrabInteractable_t8F7EA04527E7074002690EA93ACEAEFEBD79A772* >::Invoke(104, __this, L_4);
 	}
 
-IL_0027:
+IL_001e:
 	{
 		return;
 	}

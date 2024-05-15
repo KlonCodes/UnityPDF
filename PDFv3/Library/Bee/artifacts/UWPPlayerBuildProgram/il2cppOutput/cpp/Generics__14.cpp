@@ -561,11 +561,15 @@ struct IReadOnlyBindableVariable_1_tBEEF395C4523D372934939CCED44DAB1614CD0A0;
 struct IReadOnlyBindableVariable_1_t3A7ABDC22550894765705B6CF20D2291642256BA;
 struct ITypeConstructor_1_t81670FEA206550EF92A986F4A63FC5302AB1D638;
 struct ITypeConstructor_1_t3B0FE01881012CC548F6EE132D9D04AA93EDE092;
+struct ITypeConstructor_1_t2957C3F3F922000D05C6AE59163AF0088BB8D2E4;
 struct ITypeConstructor_1_t73C3366FF37ECFD1CC6142A80D1A0E31E89DDB04;
 struct ITypeConstructor_1_t0FE2B73907C0A0AEB0E84716E021DD7420B23A2B;
 struct ITypeConstructor_1_t5E4FD8D127EC0F24B375DF611109A9783C9949D0;
+struct ITypeConstructor_1_tCC196E183FB5A7CF798C682F9C3B70CDDA50CFFF;
 struct ITypeConstructor_1_tADCE5163310B602EB1878CA0050295BFB0F6B542;
+struct ITypeConstructor_1_t61D5D3D9EDD28391B0FE316A5641A34D7FF16FD0;
 struct ITypeConstructor_1_t5B814DBA70C191660AF27E38032998417073D7A2;
+struct ITypeConstructor_1_t63AA3F84ED218C4C0589371B74758F62E3EFCF85;
 struct ITypeConstructor_1_t38B0D0EFBEAA57884DFAE0A863E841E681DE2224;
 struct IValueField_1_tD13635E556FD2273E3255901D85B34D6E43A123E;
 struct InvokableCall_1_tD263A68C185ECF7369E72865998314A3704F3942;
@@ -1470,6 +1474,16 @@ struct Cache_1_t6A09774E9EC924515184CB0FBF6689D74CD57526
 		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
 	};
 };
+struct Cache_1_t1EC3F18F5B6510EED65B625CE37A6C73B0F46377 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
 struct Cache_1_tB8D73F5DFD6D8711956A5D57AEEA41C64DD59FE6 
 {
 	union
@@ -1500,6 +1514,16 @@ struct Cache_1_t4ED442C7D3A39C62CE6AD3207C2A7F04760D2F3C
 		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
 	};
 };
+struct Cache_1_tC0A5B4DEAAD4F636D5EB7222F76AFA30C44BD765 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
 struct Cache_1_t1734B78F91A5E97A0376AADF017CDD9C28F0D1E8 
 {
 	union
@@ -1510,7 +1534,27 @@ struct Cache_1_t1734B78F91A5E97A0376AADF017CDD9C28F0D1E8
 		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
 	};
 };
+struct Cache_1_t165F6C79CDB8F92D5632BF06B4D2859B4F8CB803 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
 struct Cache_1_t9D717A73959DD798ED20109ED37309FA61F9047D 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
+struct Cache_1_t2AE8DCA73B885EC1BE3528F43866A2B28BA27459 
 {
 	union
 	{
@@ -3691,6 +3735,10 @@ struct Cache_1_t6A09774E9EC924515184CB0FBF6689D74CD57526_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
+struct Cache_1_t1EC3F18F5B6510EED65B625CE37A6C73B0F46377_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
 struct Cache_1_tB8D73F5DFD6D8711956A5D57AEEA41C64DD59FE6_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
@@ -3703,11 +3751,23 @@ struct Cache_1_t4ED442C7D3A39C62CE6AD3207C2A7F04760D2F3C_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
+struct Cache_1_tC0A5B4DEAAD4F636D5EB7222F76AFA30C44BD765_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
 struct Cache_1_t1734B78F91A5E97A0376AADF017CDD9C28F0D1E8_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
+struct Cache_1_t165F6C79CDB8F92D5632BF06B4D2859B4F8CB803_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
 struct Cache_1_t9D717A73959DD798ED20109ED37309FA61F9047D_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
+struct Cache_1_t2AE8DCA73B885EC1BE3528F43866A2B28BA27459_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
@@ -25489,6 +25549,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CacheDict_2_set_Item_m4722F5C37CA815F908
 		return;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

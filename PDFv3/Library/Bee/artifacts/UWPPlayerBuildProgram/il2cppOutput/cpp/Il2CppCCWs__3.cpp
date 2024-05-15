@@ -33,6 +33,7 @@ struct KeyValuePairComparer_tE39BA8F89C2CD437E5E7BC33B54400866FECD9B7;
 struct KeyValuePairComparer_t5B4D39BE25295112C1F25686EDFF869F681D0DA1;
 struct KeyValuePairComparer_tCDE3FBD19C7DD4B28C5428B83B59A943416256B1;
 struct KeyValuePairComparer_tD64C9BA5CFE81BCCCB2809F7702148FE868C63E0;
+struct KeyValuePairComparer_tD00ACA074A90FD47CFEAAC48BC371CB16CB20A1C;
 struct KeyValuePairComparer_t7A461C682279A193E08DF8474047B11D9D53B810;
 struct KeyValuePairComparer_tD93BCD8CBB3DC036AD6F1F2F1CE3247D0E837206;
 struct KeyValuePairComparer_tB8077BF3C3B3EED60D247C76F1DDF999F396579A;
@@ -57,7 +58,6 @@ struct KeyValuePairComparer_tC47DE5BCBF163D9FBF44C4A70E217876368EFBDA;
 struct KeyValuePairComparer_t1FDFB27156502A6D766B8797A05B0F7FDC21B30F;
 struct KeyValuePairComparer_t4D00B883C8FD6A72CBB9707A8EE79AC0CD067630;
 struct KeyValuePairComparer_tD1CE89A9AEF2FAD59F968035569955D04DE3FC16;
-struct KeyValuePairComparer_t7B189C08023BE30EBD75B44D295D3127D80B25A9;
 struct KeyValuePair_2U5BU5D_t6FC64C8F407999DBA3C36FC17404A4B682F5E139;
 struct KeyValuePair_2U5BU5D_t1B669B1A03F2EBA4EFFAA8C36759D082F76A76AC;
 struct KeyValuePair_2U5BU5D_t9E55C7B976F99EE089C2ABF2DCAE43CC427321AD;
@@ -79,6 +79,7 @@ struct KeyValuePair_2U5BU5D_t9A8D94DBD7AF8AADF0D4698D7E85D2BD8680C3DE;
 struct KeyValuePair_2U5BU5D_t207104993FF4DE3EA4AA5B7D5ADF9D88E8DFF2A9;
 struct KeyValuePair_2U5BU5D_t02FC0EAE792C14EA4B7C409F181F566B1FF968AA;
 struct KeyValuePair_2U5BU5D_t3658286BDC571F2B23DEC1EB31AC7AA4453759BC;
+struct KeyValuePair_2U5BU5D_t57D92E2ACD3103997C780720A058BEE9FA04EAF0;
 struct KeyValuePair_2U5BU5D_tE120B38229A1099D92EAA69D4EE070D1773121D4;
 struct KeyValuePair_2U5BU5D_t5EF52AAC60133C40215BD0A82F53C237D05BF324;
 struct KeyValuePair_2U5BU5D_t644550CA3A23567A1D337D44FA1FC706D4EB62B0;
@@ -103,7 +104,6 @@ struct KeyValuePair_2U5BU5D_t2D954266CF7A0527B5AD358D6BDE496424881672;
 struct KeyValuePair_2U5BU5D_t00F1189D6659F8334E1D51B328A743FBD809CFB6;
 struct KeyValuePair_2U5BU5D_t185EF1C22979145FBA3233EFBDF557ECDC08113C;
 struct KeyValuePair_2U5BU5D_t420571FE192DA489A3A0E4641EEA913E4573E018;
-struct KeyValuePair_2U5BU5D_t04E0F94DFAA3C08C0C433646EAF150D93D617E03;
 
 struct IBindableIterator_t63CCD2268CEE8AFAB68518869D47C5BDAF72962F;
 struct IIterator_1_t88F3ACE96E95F4306BB1B6297F9035FF9344CFCD;
@@ -277,6 +277,12 @@ struct ConstantSplittableMap_2_t5A6814959FC34BDC9D06E825069DAFF5C1704CDF  : publ
 	int32_t ___firstItemIndex;
 	int32_t ___lastItemIndex;
 };
+struct ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2  : public RuntimeObject
+{
+	KeyValuePair_2U5BU5D_t57D92E2ACD3103997C780720A058BEE9FA04EAF0* ___items;
+	int32_t ___firstItemIndex;
+	int32_t ___lastItemIndex;
+};
 struct ConstantSplittableMap_2_t51BBEA98E9033E09D3FBC0C025D7631C741C8CF5  : public RuntimeObject
 {
 	KeyValuePair_2U5BU5D_tE120B38229A1099D92EAA69D4EE070D1773121D4* ___items;
@@ -421,12 +427,6 @@ struct ConstantSplittableMap_2_tAB3911FC623744216402E7C78CCA91C830E55F68  : publ
 	int32_t ___firstItemIndex;
 	int32_t ___lastItemIndex;
 };
-struct ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653  : public RuntimeObject
-{
-	KeyValuePair_2U5BU5D_t04E0F94DFAA3C08C0C433646EAF150D93D617E03* ___items;
-	int32_t ___firstItemIndex;
-	int32_t ___lastItemIndex;
-};
 struct ConstantSplittableMap_2_t63D06C06BF820AB054CD9AC6DA93CA3F1D026AFC_StaticFields
 {
 	KeyValuePairComparer_t71C24A250C336E4D6E779BFA0DD60B2A18BFC622* ___keyValuePairComparer;
@@ -510,6 +510,10 @@ struct ConstantSplittableMap_2_tF72918F843CFA5C85EBCF202DAA5C97C5FE2C61A_StaticF
 struct ConstantSplittableMap_2_t5A6814959FC34BDC9D06E825069DAFF5C1704CDF_StaticFields
 {
 	KeyValuePairComparer_tD64C9BA5CFE81BCCCB2809F7702148FE868C63E0* ___keyValuePairComparer;
+};
+struct ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2_StaticFields
+{
+	KeyValuePairComparer_tD00ACA074A90FD47CFEAAC48BC371CB16CB20A1C* ___keyValuePairComparer;
 };
 struct ConstantSplittableMap_2_t51BBEA98E9033E09D3FBC0C025D7631C741C8CF5_StaticFields
 {
@@ -606,10 +610,6 @@ struct ConstantSplittableMap_2_t725EAC42EB05394C67DFAA28D36513637EAC0161_StaticF
 struct ConstantSplittableMap_2_tAB3911FC623744216402E7C78CCA91C830E55F68_StaticFields
 {
 	KeyValuePairComparer_tD1CE89A9AEF2FAD59F968035569955D04DE3FC16* ___keyValuePairComparer;
-};
-struct ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653_StaticFields
-{
-	KeyValuePairComparer_t7B189C08023BE30EBD75B44D295D3127D80B25A9* ___keyValuePairComparer;
 };
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -2601,6 +2601,100 @@ IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_ConstantSplittableMa
 	}
 
 	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) ConstantSplittableMap_2_t5A6814959FC34BDC9D06E825069DAFF5C1704CDF_ComCallableWrapper(obj));
+}
+
+struct ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
+{
+	inline ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2_ComCallableWrapper>(obj) {}
+
+	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
+	{
+		if (::memcmp(&iid, &Il2CppIUnknown::IID, sizeof(Il2CppGuid)) == 0
+		 || ::memcmp(&iid, &Il2CppIInspectable::IID, sizeof(Il2CppGuid)) == 0
+		 || ::memcmp(&iid, &Il2CppIAgileObject::IID, sizeof(Il2CppGuid)) == 0)
+		{
+			*object = GetIdentity();
+			AddRefImpl();
+			return IL2CPP_S_OK;
+		}
+
+		if (::memcmp(&iid, &Il2CppIManagedObjectHolder::IID, sizeof(Il2CppGuid)) == 0)
+		{
+			*object = static_cast<Il2CppIManagedObjectHolder*>(this);
+			AddRefImpl();
+			return IL2CPP_S_OK;
+		}
+
+		if (::memcmp(&iid, &IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C::IID, sizeof(Il2CppGuid)) == 0)
+		{
+			*object = static_cast<IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C*>(this);
+			AddRefImpl();
+			return IL2CPP_S_OK;
+		}
+
+		if (::memcmp(&iid, &Il2CppIMarshal::IID, sizeof(Il2CppGuid)) == 0)
+		{
+			*object = static_cast<Il2CppIMarshal*>(this);
+			AddRefImpl();
+			return IL2CPP_S_OK;
+		}
+
+		if (::memcmp(&iid, &Il2CppIWeakReferenceSource::IID, sizeof(Il2CppGuid)) == 0)
+		{
+			*object = static_cast<Il2CppIWeakReferenceSource*>(this);
+			AddRefImpl();
+			return IL2CPP_S_OK;
+		}
+
+		*object = NULL;
+		return IL2CPP_E_NOINTERFACE;
+	}
+
+	virtual uint32_t STDCALL AddRef() IL2CPP_OVERRIDE
+	{
+		return AddRefImpl();
+	}
+
+	virtual uint32_t STDCALL Release() IL2CPP_OVERRIDE
+	{
+		return ReleaseImpl();
+	}
+
+	virtual il2cpp_hresult_t STDCALL GetIids(uint32_t* iidCount, Il2CppGuid** iids) IL2CPP_OVERRIDE
+	{
+		Il2CppGuid* interfaceIds = il2cpp_codegen_marshal_allocate_array<Il2CppGuid>(1);
+		interfaceIds[0] = IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C::IID;
+
+		*iidCount = 1;
+		*iids = interfaceIds;
+		return IL2CPP_S_OK;
+	}
+
+	virtual il2cpp_hresult_t STDCALL GetRuntimeClassName(Il2CppHString* className) IL2CPP_OVERRIDE
+	{
+		return GetRuntimeClassNameImpl(className);
+	}
+
+	virtual il2cpp_hresult_t STDCALL GetTrustLevel(int32_t* trustLevel) IL2CPP_OVERRIDE
+	{
+		return ComObjectBase::GetTrustLevel(trustLevel);
+	}
+
+	virtual il2cpp_hresult_t STDCALL IBindableIterable_First_mE23AC28EC9ADCDD2688247217CF40C800E780B97(IBindableIterator_t63CCD2268CEE8AFAB68518869D47C5BDAF72962F** comReturnValue) IL2CPP_OVERRIDE
+	{
+		return IBindableIterable_First_mE23AC28EC9ADCDD2688247217CF40C800E780B97_ComCallableWrapperProjectedMethod(GetManagedObjectInline(), comReturnValue);
+	}
+};
+
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2(RuntimeObject* obj)
+{
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2_ComCallableWrapper));
+	if (memory == NULL)
+	{
+		il2cpp_codegen_raise_out_of_memory_exception();
+	}
+
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) ConstantSplittableMap_2_t219DCD98BB6338247FA4AFF9806673B4BF3050C2_ComCallableWrapper(obj));
 }
 
 struct ConstantSplittableMap_2_t51BBEA98E9033E09D3FBC0C025D7631C741C8CF5_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<ConstantSplittableMap_2_t51BBEA98E9033E09D3FBC0C025D7631C741C8CF5_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
@@ -4939,98 +5033,4 @@ IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_ConstantSplittableMa
 	}
 
 	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) ConstantSplittableMap_2_tAB3911FC623744216402E7C78CCA91C830E55F68_ComCallableWrapper(obj));
-}
-
-struct ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C
-{
-	inline ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653_ComCallableWrapper>(obj) {}
-
-	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
-	{
-		if (::memcmp(&iid, &Il2CppIUnknown::IID, sizeof(Il2CppGuid)) == 0
-		 || ::memcmp(&iid, &Il2CppIInspectable::IID, sizeof(Il2CppGuid)) == 0
-		 || ::memcmp(&iid, &Il2CppIAgileObject::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = GetIdentity();
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &Il2CppIManagedObjectHolder::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<Il2CppIManagedObjectHolder*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &Il2CppIMarshal::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<Il2CppIMarshal*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &Il2CppIWeakReferenceSource::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<Il2CppIWeakReferenceSource*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		*object = NULL;
-		return IL2CPP_E_NOINTERFACE;
-	}
-
-	virtual uint32_t STDCALL AddRef() IL2CPP_OVERRIDE
-	{
-		return AddRefImpl();
-	}
-
-	virtual uint32_t STDCALL Release() IL2CPP_OVERRIDE
-	{
-		return ReleaseImpl();
-	}
-
-	virtual il2cpp_hresult_t STDCALL GetIids(uint32_t* iidCount, Il2CppGuid** iids) IL2CPP_OVERRIDE
-	{
-		Il2CppGuid* interfaceIds = il2cpp_codegen_marshal_allocate_array<Il2CppGuid>(1);
-		interfaceIds[0] = IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C::IID;
-
-		*iidCount = 1;
-		*iids = interfaceIds;
-		return IL2CPP_S_OK;
-	}
-
-	virtual il2cpp_hresult_t STDCALL GetRuntimeClassName(Il2CppHString* className) IL2CPP_OVERRIDE
-	{
-		return GetRuntimeClassNameImpl(className);
-	}
-
-	virtual il2cpp_hresult_t STDCALL GetTrustLevel(int32_t* trustLevel) IL2CPP_OVERRIDE
-	{
-		return ComObjectBase::GetTrustLevel(trustLevel);
-	}
-
-	virtual il2cpp_hresult_t STDCALL IBindableIterable_First_mE23AC28EC9ADCDD2688247217CF40C800E780B97(IBindableIterator_t63CCD2268CEE8AFAB68518869D47C5BDAF72962F** comReturnValue) IL2CPP_OVERRIDE
-	{
-		return IBindableIterable_First_mE23AC28EC9ADCDD2688247217CF40C800E780B97_ComCallableWrapperProjectedMethod(GetManagedObjectInline(), comReturnValue);
-	}
-};
-
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653(RuntimeObject* obj)
-{
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653_ComCallableWrapper));
-	if (memory == NULL)
-	{
-		il2cpp_codegen_raise_out_of_memory_exception();
-	}
-
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) ConstantSplittableMap_2_t30878029152B4C8FF5E73FD425972710F410C653_ComCallableWrapper(obj));
 }

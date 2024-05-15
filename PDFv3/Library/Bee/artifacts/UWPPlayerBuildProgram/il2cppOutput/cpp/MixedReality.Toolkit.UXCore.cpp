@@ -3733,6 +3733,7 @@ struct MouseModel_t2F69F33E707572E3123D32A97E370F329CE4DC37
 {
 	int32_t ___U3CpointerIdU3Ek__BackingField;
 	bool ___U3CchangedThisFrameU3Ek__BackingField;
+	int32_t ___m_DisplayIndex;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_Position;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CdeltaPositionU3Ek__BackingField;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_ScrollDelta;
@@ -3745,6 +3746,7 @@ struct MouseModel_t2F69F33E707572E3123D32A97E370F329CE4DC37_marshaled_pinvoke
 {
 	int32_t ___U3CpointerIdU3Ek__BackingField;
 	int32_t ___U3CchangedThisFrameU3Ek__BackingField;
+	int32_t ___m_DisplayIndex;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_Position;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CdeltaPositionU3Ek__BackingField;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_ScrollDelta;
@@ -3757,6 +3759,7 @@ struct MouseModel_t2F69F33E707572E3123D32A97E370F329CE4DC37_marshaled_com
 {
 	int32_t ___U3CpointerIdU3Ek__BackingField;
 	int32_t ___U3CchangedThisFrameU3Ek__BackingField;
+	int32_t ___m_DisplayIndex;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_Position;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CdeltaPositionU3Ek__BackingField;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_ScrollDelta;

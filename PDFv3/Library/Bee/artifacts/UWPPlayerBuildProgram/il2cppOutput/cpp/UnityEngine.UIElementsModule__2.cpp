@@ -7130,10 +7130,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyboardTextEditorEventHandler_UpdateLab
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	bool V_5 = false;
-	bool V_6 = false;
 	int32_t G_B3_0 = 0;
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B8_0 = NULL;
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B7_0 = NULL;
 	{
 		TextEditingUtilities_t820601DF226F1304342A16EB09852FEA56AA8770* L_0 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___editingUtilities;
 		NullCheck(L_0);
@@ -7215,75 +7212,33 @@ IL_0067:
 		String_t* L_22 = V_2;
 		NullCheck(L_21);
 		InterfaceActionInvoker1< String_t* >::Invoke(20, ITextEdition_tCCF2749F0A6AEE80B6AEFCDC5D03F4CA7AFBE18C_il2cpp_TypeInfo_var, L_21, L_22);
-		TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0* L_23 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___textElement;
-		NullCheck(L_23);
-		RuntimeObject* L_24;
-		L_24 = TextElement_get_edition_m29D5704DD0B49EA8AC63B5CEBA9A69AC075327CC(L_23, NULL);
-		NullCheck(L_24);
-		bool L_25;
-		L_25 = InterfaceFuncInvoker0< bool >::Invoke(6, ITextEdition_tCCF2749F0A6AEE80B6AEFCDC5D03F4CA7AFBE18C_il2cpp_TypeInfo_var, L_24);
-		V_5 = (bool)((((int32_t)L_25) == ((int32_t)0))? 1 : 0);
-		bool L_26 = V_5;
-		if (!L_26)
+		bool L_23 = V_1;
+		V_5 = L_23;
+		bool L_24 = V_5;
+		if (!L_24)
 		{
-			goto IL_00c5;
+			goto IL_00b2;
 		}
 	}
 	{
-		TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0* L_27 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___textElement;
+		TextEditingUtilities_t820601DF226F1304342A16EB09852FEA56AA8770* L_25 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___editingUtilities;
+		String_t* L_26 = V_0;
+		NullCheck(L_25);
+		TextEditingUtilities_set_text_mC1FD19476AF4FA014E9DBA5A33C54A57E2FA70EC(L_25, L_26, NULL);
+		TextEditingUtilities_t820601DF226F1304342A16EB09852FEA56AA8770* L_27 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___editingUtilities;
 		NullCheck(L_27);
-		RuntimeObject* L_28;
-		L_28 = TextElement_get_edition_m29D5704DD0B49EA8AC63B5CEBA9A69AC075327CC(L_27, NULL);
+		TextEditingUtilities_EnableCursorPreviewState_mD28C1FAC4AFFEE396D903D1EED90DF1F5BC6A85B(L_27, NULL);
+	}
+
+IL_00b2:
+	{
+		TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0* L_28 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___textElement;
 		NullCheck(L_28);
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_29;
-		L_29 = InterfaceFuncInvoker0< Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* >::Invoke(14, ITextEdition_tCCF2749F0A6AEE80B6AEFCDC5D03F4CA7AFBE18C_il2cpp_TypeInfo_var, L_28);
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_30 = L_29;
-		if (L_30)
-		{
-			G_B8_0 = L_30;
-			goto IL_00bf;
-		}
-		G_B7_0 = L_30;
-	}
-	{
-		goto IL_00c5;
-	}
-
-IL_00bf:
-	{
-		NullCheck(G_B8_0);
-		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B8_0, NULL);
-	}
-
-IL_00c5:
-	{
-		bool L_31 = V_1;
-		V_6 = L_31;
-		bool L_32 = V_6;
-		if (!L_32)
-		{
-			goto IL_00e7;
-		}
-	}
-	{
-		TextEditingUtilities_t820601DF226F1304342A16EB09852FEA56AA8770* L_33 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___editingUtilities;
-		String_t* L_34 = V_0;
-		NullCheck(L_33);
-		TextEditingUtilities_set_text_mC1FD19476AF4FA014E9DBA5A33C54A57E2FA70EC(L_33, L_34, NULL);
-		TextEditingUtilities_t820601DF226F1304342A16EB09852FEA56AA8770* L_35 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___editingUtilities;
-		NullCheck(L_35);
-		TextEditingUtilities_EnableCursorPreviewState_mD28C1FAC4AFFEE396D903D1EED90DF1F5BC6A85B(L_35, NULL);
-	}
-
-IL_00e7:
-	{
-		TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0* L_36 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___textElement;
-		NullCheck(L_36);
-		UITKTextHandle_t1FF3B4EC2367C05F42D61C660D6FE30DF91C06CE* L_37;
-		L_37 = TextElement_get_uitkTextHandle_mDD90F6CABD0751B41047595A894044FA654C360C_inline(L_36, NULL);
-		NullCheck(L_37);
-		TextInfo_t27E58E62A7552C66D38C175AF9D22622365F5D09* L_38;
-		L_38 = UITKTextHandle_Update_mF10E1C5EA643E44DEC617639C219646B49160722(L_37, NULL);
+		UITKTextHandle_t1FF3B4EC2367C05F42D61C660D6FE30DF91C06CE* L_29;
+		L_29 = TextElement_get_uitkTextHandle_mDD90F6CABD0751B41047595A894044FA654C360C_inline(L_28, NULL);
+		NullCheck(L_29);
+		TextInfo_t27E58E62A7552C66D38C175AF9D22622365F5D09* L_30;
+		L_30 = UITKTextHandle_Update_mF10E1C5EA643E44DEC617639C219646B49160722(L_29, NULL);
 		return;
 	}
 }
@@ -8500,16 +8455,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchScreenTextEditorEventHandler_DoPoll
 	bool V_17 = false;
 	bool V_18 = false;
 	bool V_19 = false;
-	bool V_20 = false;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B12_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B11_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B15_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B14_0 = NULL;
 	int32_t G_B35_0 = 0;
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B42_0 = NULL;
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B41_0 = NULL;
-	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* G_B45_0 = NULL;
-	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* G_B44_0 = NULL;
+	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* G_B41_0 = NULL;
+	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* G_B40_0 = NULL;
 	{
 		TextEditingUtilities_t820601DF226F1304342A16EB09852FEA56AA8770* L_0 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___editingUtilities;
 		NullCheck(L_0);
@@ -8519,7 +8471,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchScreenTextEditorEventHandler_DoPoll
 		bool L_2 = V_0;
 		if (!L_2)
 		{
-			goto IL_0280;
+			goto IL_025f;
 		}
 	}
 	{
@@ -8534,7 +8486,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchScreenTextEditorEventHandler_DoPoll
 		}
 	}
 	{
-		goto IL_0289;
+		goto IL_0268;
 	}
 
 IL_002d:
@@ -8688,7 +8640,7 @@ IL_00eb:
 		TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0* L_40 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___textElement;
 		NullCheck(L_40);
 		VirtualActionInvoker0::Invoke(18, L_40);
-		goto IL_0289;
+		goto IL_0268;
 	}
 
 IL_00fc:
@@ -8708,7 +8660,7 @@ IL_00fc:
 		}
 	}
 	{
-		goto IL_0289;
+		goto IL_0268;
 	}
 
 IL_0118:
@@ -8774,7 +8726,7 @@ IL_0160:
 		}
 	}
 	{
-		goto IL_0289;
+		goto IL_0268;
 	}
 
 IL_0187:
@@ -8917,78 +8869,42 @@ IL_0224:
 
 IL_023f:
 	{
-		RuntimeObject* L_93 = V_1;
+		TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0* L_93 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___textElement;
 		NullCheck(L_93);
-		bool L_94;
-		L_94 = InterfaceFuncInvoker0< bool >::Invoke(6, ITextEdition_tCCF2749F0A6AEE80B6AEFCDC5D03F4CA7AFBE18C_il2cpp_TypeInfo_var, L_93);
-		V_20 = (bool)((((int32_t)L_94) == ((int32_t)0))? 1 : 0);
-		bool L_95 = V_20;
-		if (!L_95)
+		RuntimeObject* L_94;
+		L_94 = TextElement_get_edition_m29D5704DD0B49EA8AC63B5CEBA9A69AC075327CC(L_93, NULL);
+		NullCheck(L_94);
+		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_95;
+		L_95 = InterfaceFuncInvoker0< Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* >::Invoke(12, ITextEdition_tCCF2749F0A6AEE80B6AEFCDC5D03F4CA7AFBE18C_il2cpp_TypeInfo_var, L_94);
+		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_96 = L_95;
+		if (L_96)
 		{
-			goto IL_0260;
+			G_B41_0 = L_96;
+			goto IL_0255;
 		}
+		G_B40_0 = L_96;
 	}
 	{
-		RuntimeObject* L_96 = V_1;
-		NullCheck(L_96);
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_97;
-		L_97 = InterfaceFuncInvoker0< Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* >::Invoke(14, ITextEdition_tCCF2749F0A6AEE80B6AEFCDC5D03F4CA7AFBE18C_il2cpp_TypeInfo_var, L_96);
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_98 = L_97;
-		if (L_98)
-		{
-			G_B42_0 = L_98;
-			goto IL_025a;
-		}
-		G_B41_0 = L_98;
-	}
-	{
-		goto IL_0260;
+		goto IL_025c;
 	}
 
-IL_025a:
+IL_0255:
 	{
-		NullCheck(G_B42_0);
-		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B42_0, NULL);
+		NullCheck(G_B41_0);
+		Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F_inline(G_B41_0, (bool)0, NULL);
 	}
 
-IL_0260:
+IL_025c:
 	{
-		TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0* L_99 = ((TextEditorEventHandler_t31E517704D1ACFF029D3FDD6AD9E134EE71FB3F7*)__this)->___textElement;
-		NullCheck(L_99);
-		RuntimeObject* L_100;
-		L_100 = TextElement_get_edition_m29D5704DD0B49EA8AC63B5CEBA9A69AC075327CC(L_99, NULL);
-		NullCheck(L_100);
-		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_101;
-		L_101 = InterfaceFuncInvoker0< Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* >::Invoke(12, ITextEdition_tCCF2749F0A6AEE80B6AEFCDC5D03F4CA7AFBE18C_il2cpp_TypeInfo_var, L_100);
-		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_102 = L_101;
-		if (L_102)
-		{
-			G_B45_0 = L_102;
-			goto IL_0276;
-		}
-		G_B44_0 = L_102;
-	}
-	{
-		goto IL_027d;
+		goto IL_0268;
 	}
 
-IL_0276:
-	{
-		NullCheck(G_B45_0);
-		Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F_inline(G_B45_0, (bool)0, NULL);
-	}
-
-IL_027d:
-	{
-		goto IL_0289;
-	}
-
-IL_0280:
+IL_025f:
 	{
 		TouchScreenTextEditorEventHandler_CloseTouchScreenKeyboard_mFA2CBF4521D8DE341E5B3EF958043EF4C0B24A91(__this, NULL);
 	}
 
-IL_0289:
+IL_0268:
 	{
 		return;
 	}

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638512935913966801
-    m_Hash: 3927118222
+      ticks: 638513861390901769
+    m_Hash: 823120252
   m_LockFileStatus:
     m_FilePath: C:/Users/j2fxs/Documents/GitHub/UnityPDF/PDFv3/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638512935913966801
-    m_Hash: 3742658656
+      ticks: 638513861631701191
+    m_Hash: 4249118831
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -188,7 +188,7 @@ m_LocalPackages:
       ticks: 638491365031040815
     m_Hash: 2691503807
 m_ProjectPath: C:/Users/j2fxs/Documents/GitHub/UnityPDF/PDFv3/Packages
-m_EditorVersion: 2022.3.24f1 (334eb2a0b267)
+m_EditorVersion: 2022.3.28f1 (6bae5ce6b222)
 m_ResolvedPackages:
 - packageId: com.microsoft.mixedreality.openxr@file:C:\Users\j2fxs\Documents\GitHub\UnityPDF\PDFv3\Packages\MixedReality\com.microsoft.mixedreality.openxr-1.10.0.tgz
   testable: 0
@@ -1091,12 +1091,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.visualscripting@1.9.2
+- packageId: com.unity.visualscripting@1.9.4
   testable: 0
   isDirectDependency: 1
-  version: 1.9.2
+  version: 1.9.4
   source: 1
-  resolvedPath: C:\Users\j2fxs\Documents\GitHub\UnityPDF\PDFv3\Library\PackageCache\com.unity.visualscripting@1.9.2
+  resolvedPath: C:\Users\j2fxs\Documents\GitHub\UnityPDF\PDFv3\Library\PackageCache\com.unity.visualscripting@1.9.4
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1144,7 +1144,6 @@ m_ResolvedPackages:
     - 1.9.2
     - 1.9.4
     compatible:
-    - 1.9.2
     - 1.9.4
     recommended: 1.9.4
     deprecated:
@@ -1174,16 +1173,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638452551610000000
+  datePublishedTicks: 638488567680000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 0dd874ef58a75ee4b4df6a81e65230e2602096a3
+    revision: 41aac2b7038c2b1259c546329890d3736ce2394e
     path: 
   unityLifecycle:
-    version: 1.9.2
+    version: 1.9.4
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -1239,9 +1238,11 @@ m_ResolvedPackages:
     - 1.9.1
     - 1.10.0
     - 1.11.0-exp.1
+    - 1.11.0
     compatible:
     - 1.10.0
     - 1.11.0-exp.1
+    - 1.11.0
     recommended: 1.10.0
     deprecated: []
   dependencies:
@@ -1343,7 +1344,7 @@ m_ResolvedPackages:
     version: 2.1.0
   resolvedDependencies:
   - name: com.unity.xr.interaction.toolkit
-    version: 2.5.2
+    version: 2.5.4
   - name: com.unity.inputsystem
     version: 1.7.0
   - name: com.unity.modules.uielements
@@ -1551,9 +1552,9 @@ m_ResolvedPackages:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.xr.hands
-    version: 1.3.0
+    version: 1.4.0
   - name: com.unity.xr.interaction.toolkit
-    version: 2.5.2
+    version: 2.5.4
   - name: com.unity.modules.audio
     version: 1.0.0
   - name: org.mixedrealitytoolkit.core
@@ -1622,7 +1623,7 @@ m_ResolvedPackages:
   - name: org.mixedrealitytoolkit.core
     version: 3.2.0
   - name: com.unity.xr.interaction.toolkit
-    version: 2.5.2
+    version: 2.5.4
   - name: com.unity.inputsystem
     version: 1.7.0
   - name: com.unity.modules.uielements
@@ -1774,7 +1775,7 @@ m_ResolvedPackages:
   - name: org.mixedrealitytoolkit.core
     version: 3.2.0
   - name: com.unity.xr.interaction.toolkit
-    version: 2.5.2
+    version: 2.5.4
   - name: com.unity.inputsystem
     version: 1.7.0
   - name: com.unity.modules.uielements
@@ -1876,7 +1877,7 @@ m_ResolvedPackages:
   - name: org.mixedrealitytoolkit.core
     version: 3.2.0
   - name: com.unity.xr.interaction.toolkit
-    version: 2.5.2
+    version: 2.5.4
   - name: com.unity.inputsystem
     version: 1.7.0
   - name: com.unity.modules.uielements
@@ -1982,7 +1983,7 @@ m_ResolvedPackages:
   - name: org.mixedrealitytoolkit.core
     version: 3.2.0
   - name: com.unity.xr.interaction.toolkit
-    version: 2.5.2
+    version: 2.5.4
   - name: com.unity.inputsystem
     version: 1.7.0
   - name: com.unity.modules.uielements
@@ -2092,7 +2093,7 @@ m_ResolvedPackages:
   - name: org.mixedrealitytoolkit.core
     version: 3.2.0
   - name: com.unity.xr.interaction.toolkit
-    version: 2.5.2
+    version: 2.5.4
   - name: com.unity.inputsystem
     version: 1.7.0
   - name: com.unity.modules.uielements
@@ -4176,12 +4177,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.xr.interaction.toolkit@2.5.2
+- packageId: com.unity.xr.interaction.toolkit@2.5.4
   testable: 0
   isDirectDependency: 0
-  version: 2.5.2
+  version: 2.5.4
   source: 1
-  resolvedPath: C:\Users\j2fxs\Documents\GitHub\UnityPDF\PDFv3\Library\PackageCache\com.unity.xr.interaction.toolkit@2.5.2
+  resolvedPath: C:\Users\j2fxs\Documents\GitHub\UnityPDF\PDFv3\Library\PackageCache\com.unity.xr.interaction.toolkit@2.5.4
   assetPath: Packages/com.unity.xr.interaction.toolkit
   name: com.unity.xr.interaction.toolkit
   displayName: XR Interaction Toolkit
@@ -4244,14 +4245,14 @@ m_ResolvedPackages:
     - 3.0.0-pre.2
     - 3.0.0
     - 3.0.1
+    - 3.0.3
     compatible:
-    - 2.5.2
-    - 2.5.3
     - 2.5.4
     - 3.0.0-pre.1
     - 3.0.0-pre.2
     - 3.0.0
     - 3.0.1
+    - 3.0.3
     recommended: 2.5.4
     deprecated: []
   dependencies:
@@ -4315,17 +4316,17 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638321761050000000
+  datePublishedTicks: 638484578960000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.5/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.xr.interaction.toolkit.git
-    revision: b246090d3472f6ddef44f0d6251360fc3d19a2b5
+    revision: e01bea0029c4995e80fe3e3f8a24f92e1cad1f4c
     path: 
   unityLifecycle:
-    version: 2.5.2
-    nextVersion: 3.0.0-pre.1
+    version: 2.5.4
+    nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
@@ -4679,12 +4680,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.xr.hands@1.3.0
+- packageId: com.unity.xr.hands@1.4.0
   testable: 0
   isDirectDependency: 0
-  version: 1.3.0
+  version: 1.4.0
   source: 1
-  resolvedPath: C:\Users\j2fxs\Documents\GitHub\UnityPDF\PDFv3\Library\PackageCache\com.unity.xr.hands@1.3.0
+  resolvedPath: C:\Users\j2fxs\Documents\GitHub\UnityPDF\PDFv3\Library\PackageCache\com.unity.xr.hands@1.4.0
   assetPath: Packages/com.unity.xr.hands
   name: com.unity.xr.hands
   displayName: XR Hands
@@ -4712,12 +4713,10 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.5.0-pre.1
     compatible:
-    - 1.3.0
-    - 1.4.0-pre.1
     - 1.4.0
     - 1.4.1
     - 1.5.0-pre.1
-    recommended: 1.3.0
+    recommended: 1.4.1
     deprecated: []
   dependencies:
   - name: com.unity.inputsystem
@@ -4728,6 +4727,8 @@ m_ResolvedPackages:
     version: 2.2.0
   - name: com.unity.xr.management
     version: 4.0.1
+  - name: com.unity.mathematics
+    version: 1.2.6
   resolvedDependencies:
   - name: com.unity.inputsystem
     version: 1.7.0
@@ -4753,6 +4754,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.xr.legacyinputhelpers
     version: 2.1.10
+  - name: com.unity.mathematics
+    version: 1.2.6
   keywords:
   - xr
   - vr
@@ -4772,17 +4775,17 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638283167010000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.xr.hands@1.3/manual/index.html
+  datePublishedTicks: 638448203660000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.xr.hands@1.4/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.xr.hands.git
-    revision: 3c7b72f0abeabbe733ac0f37b40f5560a732ceda
+    revision: fe5bc832bb00abf0d2351243f0d628d63ed9f045
     path: 
   unityLifecycle:
-    version: 1.3.0
-    nextVersion: 1.4.0-pre.1
+    version: 1.4.0
+    nextVersion: 1.5.0-pre.1
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
@@ -4919,7 +4922,7 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 4.4.0
     nextVersion: 
-    recommendedVersion: 
+    recommendedVersion: 4.4.1
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
