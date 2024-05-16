@@ -12,7 +12,21 @@ public class PageHandler : MonoBehaviour
     public Image imageContainer;
     public GameObject readingPane;
     public GameObject pageGrid;
+    public GameObject pageWrap;
+
+    public Camera mainCamera = Camera.main;
+    Vector3 userPosition;
+    Quaternion userRotation;
+    public float distanceFromUser = 2.0f;
+
     public int p = 0; //current page number
+
+    void Update()
+    {
+        // Get the main camera's position and rotation
+        userPosition = mainCamera.transform.position;
+        userRotation = mainCamera.transform.rotation;
+    }
 
     public void SetImage(int index)
     {
@@ -30,8 +44,24 @@ public class PageHandler : MonoBehaviour
 
     public void GridToggle()
     {
+        ViewToggle(pageGrid);
+    }
+
+    public void WrapToggle()
+    {
+        ViewToggle(pageWrap);
+    }
+
+    public void ViewToggle(GameObject OTT)
+    {
+        Vector3 positionInFront = userPosition + (mainCamera.transform.forward * distanceFromUser);
+        OTT.transform.position = positionInFront;
+        OTT.transform.LookAt(userPosition);
+        OTT.transform.rotation = Quaternion.Euler(0.0f, OTT.transform.rotation.eulerAngles.y, 0.0f);
+        OTT.transform.Rotate(0f, 180f, 0f);
+
         readingPane.SetActive(!readingPane.activeSelf);
-        pageGrid.SetActive(!pageGrid.activeSelf);
+        OTT.SetActive(!OTT.activeSelf);
     }
 
     public void NextPage()
@@ -57,15 +87,5 @@ public class PageHandler : MonoBehaviour
         Debug.Log("Value is " + sliderValue);
         SetImage(s);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

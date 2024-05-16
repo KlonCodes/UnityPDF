@@ -9,6 +9,7 @@ public class HandButtons : MonoBehaviour
     public GameObject ButtonBar;
     public GameObject SlideBar;
     public GameObject SFTBar;
+    public GameObject WrapBar;
 
 
     private GameObject ActiveBar;
@@ -28,6 +29,7 @@ public class HandButtons : MonoBehaviour
 
         SlideBar.SetActive(false);
         SFTBar.SetActive(false);
+        WrapBar.SetActive(false);
         ButtonBar.SetActive(true);
 
         ButtonBar.transform.position = ABTransform.position;
@@ -41,6 +43,7 @@ public class HandButtons : MonoBehaviour
 
         ButtonBar.SetActive(false);
         SFTBar.SetActive(false);
+        WrapBar.SetActive(false);
         SlideBar.SetActive(true);
 
         SlideBar.transform.position = ABTransform.position;
@@ -53,11 +56,25 @@ public class HandButtons : MonoBehaviour
 
         ButtonBar.SetActive(false);
         SlideBar.SetActive(false);
+        WrapBar.SetActive(false);
         SFTBar.SetActive(true);
 
         SFTBar.transform.position = ABTransform.position;
         SFTBar.transform.rotation = ABTransform.rotation;
         SFTBar.GetComponent<RadialView>().enabled = ActiveBar.GetComponent<RadialView>().enabled;
+    }
+    public void ActWrap()
+    {
+        GetActiveBar();
+        WrapBar.transform.position = ABTransform.position;
+        WrapBar.transform.rotation = ABTransform.rotation;
+        WrapBar.GetComponent<RadialView>().enabled = ActiveBar.GetComponent<RadialView>().enabled;
+
+        ButtonBar.SetActive(false);
+        SlideBar.SetActive(false);
+        SFTBar.SetActive(false);
+        WrapBar.SetActive(true);
+
     }
 
     public void GetActiveBar()
@@ -74,6 +91,8 @@ public class HandButtons : MonoBehaviour
             return SlideBar;
         else if (SFTBar.activeSelf)
             return SFTBar;
+        else if (WrapBar.activeSelf)
+            return WrapBar;
         else
             ButtonBar.SetActive(true);
         return ButtonBar;
