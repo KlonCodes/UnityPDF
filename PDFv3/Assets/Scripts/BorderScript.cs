@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class BorderScript : MonoBehaviour
 {
-    public int pNumber; // The value to check for
+    private int pNum; // The value to check for
     private int P;
-    public GameObject eReader;
+    public GameObject reader;
     private GameObject border;
     private bool showBorder = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        string pName = gameObject.name[2..];
+        pNum = int.Parse(pName) - 1;
+
         border = transform.GetChild(0).gameObject;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        P = eReader.GetComponent<PageHandler>().p;
-        showBorder = (P == pNumber);
+        P = reader.GetComponent<PageHandler>().p;
+        showBorder = (P == pNum);
     }
 
     void OnGUI()

@@ -1,16 +1,19 @@
 using UnityEngine;
 using System.Collections;
+using MixedReality.Toolkit;
 
 public class HoverScript : MonoBehaviour
 {
-    public float scaleFactor = 1.2f; // The factor by which the object will scale
+    public float scaleFactor = 2f; // The factor by which the object will scale
     public float duration = 0.12f; // Very short duration for a snappy grow effect
     private Vector3 originalScale;
     private Coroutine currentCoroutine; // To keep track of the current animation
-
+    public GameObject Reader;
 
     private Canvas canvas;
     private int originalSortingOrder;
+
+    private StatefulInteractable SI;
 
     void Start()
     {
@@ -18,6 +21,9 @@ public class HoverScript : MonoBehaviour
         canvas = GetComponent<Canvas>();
         canvas.sortingOrder = 0;
         originalSortingOrder = canvas.sortingOrder;
+
+        SI = GetComponent<StatefulInteractable>();
+        SI.OnClicked.AddListener(SendPage);
 
     }
 
@@ -30,7 +36,6 @@ public class HoverScript : MonoBehaviour
         float rs = scaleFactor - 1;
         rs = (float)(rs / 5);
         rs += 1;
-        //GetComponent<PageHighlighter>().GrowRect(rs, duration);
 
         canvas.sortingOrder = originalSortingOrder + 1;
 
@@ -44,7 +49,6 @@ public class HoverScript : MonoBehaviour
             StopCoroutine(currentCoroutine);
         }
         float d = (float)(duration * 1.5);
-        //GetComponent<PageHighlighter>().ShrinkRect(d);
 
         canvas.sortingOrder = originalSortingOrder;
 
@@ -57,10 +61,10 @@ public class HoverScript : MonoBehaviour
             StopCoroutine(currentCoroutine);
         }
         transform.localScale = originalScale;
-        //GetComponent<PageHighlighter>().QuickShrinkRect();
         canvas.sortingOrder = originalSortingOrder;
 
     }
+
 
     IEnumerator ScaleOverTime(Vector3 targetScale, float duration)
     {
@@ -75,5 +79,20 @@ public class HoverScript : MonoBehaviour
         }
 
         transform.localScale = targetScale;
+    }
+
+    public void SendPage()
+    {
+
+        PageHandler pgs = Reader.GetComponent<PageHandler>();
+
+        string pName = gameObject.name[2..];
+        int pNum = int.Parse(pName)-1;
+
+        pgs.SetImage(pNum);
+        quickSP();
+        pgs.GridToggle();
+
+
     }
 }

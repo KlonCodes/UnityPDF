@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,19 +9,34 @@ using Slider = MixedReality.Toolkit.UX.Slider;
 
 public class PageHandler : MonoBehaviour
 {
-    public Sprite[] pages;
+    private Sprite[] pages;
     public Image imageContainer;
     public GameObject readingPane;
     public GameObject pageGrid;
     public GameObject pageWrap;
 
     public Camera mainCamera = Camera.main;
+
+    public PageHandler(Camera mainCamera)
+    {
+        this.mainCamera = mainCamera;
+    }
+
     Vector3 userPosition;
     Quaternion userRotation;
-    public float distanceFromUser = 2.0f;
+    public float planeD = 2.0f;
+    public float wrapD = 2.0f;
 
     public int p = 0; //current page number
 
+    private void Start()
+    {
+        pages = Resources.LoadAll<Sprite>("Sprites");
+
+        pages = pages.OrderBy(
+        s => int.Parse(s.name.Substring(s.name.LastIndexOf('_') + 1))
+).ToArray();
+    }
     void Update()
     {
         // Get the main camera's position and rotation
@@ -44,17 +60,17 @@ public class PageHandler : MonoBehaviour
 
     public void GridToggle()
     {
-        ViewToggle(pageGrid);
+        ViewToggle(pageGrid, planeD);
     }
 
     public void WrapToggle()
     {
-        ViewToggle(pageWrap);
+        ViewToggle(pageWrap, wrapD);
     }
 
-    public void ViewToggle(GameObject OTT)
+    public void ViewToggle(GameObject OTT, float D)
     {
-        Vector3 positionInFront = userPosition + (mainCamera.transform.forward * distanceFromUser);
+        Vector3 positionInFront = userPosition + (mainCamera.transform.forward * D);
         OTT.transform.position = positionInFront;
         OTT.transform.LookAt(userPosition);
         OTT.transform.rotation = Quaternion.Euler(0.0f, OTT.transform.rotation.eulerAngles.y, 0.0f);
@@ -79,6 +95,7 @@ public class PageHandler : MonoBehaviour
     }
 
     //[System.Obsolete]
+    [Obsolete]
     public void SetSlide(GameObject S)
     {
         Slider sliderScript = S.GetComponent<Slider>();
