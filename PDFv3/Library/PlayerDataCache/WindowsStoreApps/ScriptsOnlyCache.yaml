@@ -2,11 +2,13 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - BorderScript
-    - GridScript
     - HandButtons
     - HoverScript
+    - HoverScript2
+    - HoverScript3
     - PageHandler
     - PageHighlighter
+    - TextureAssigner
     Microsoft.MixedReality.GraphicsTools.dll:
     - Microsoft.MixedReality.GraphicsTools.CanvasElementRoundedRect
     - Microsoft.MixedReality.GraphicsTools.CanvasMaterialAnimatorCanvasBackplate
@@ -23,7 +25,9 @@ ScriptsOnlyBuild:
     - Microsoft.MixedReality.OpenXR.Remoting.AppRemotingPlugin
     - Microsoft.MixedReality.OpenXR.Remoting.PlayModeRemotingPlugin
     MixedReality.Toolkit.Core.Editor.dll:
+    - MixedReality.Toolkit.Editor.MRTKProfileEditor
     - MixedReality.Toolkit.Editor.MRTKSettings
+    - MixedReality.Toolkit.Editor.MRTKSettingsEditor
     MixedReality.Toolkit.Core.dll:
     - MixedReality.Toolkit.CameraSettingsManager
     - MixedReality.Toolkit.ControllerLookup
@@ -66,6 +70,7 @@ ScriptsOnlyBuild:
     - MixedReality.Toolkit.SpatialManipulation.FaceUserConstraint
     - MixedReality.Toolkit.SpatialManipulation.Follow
     - MixedReality.Toolkit.SpatialManipulation.HandConstraintPalmUp
+    - MixedReality.Toolkit.SpatialManipulation.MinMaxScaleConstraint
     - MixedReality.Toolkit.SpatialManipulation.ObjectManipulator
     - MixedReality.Toolkit.SpatialManipulation.RadialView
     - MixedReality.Toolkit.SpatialManipulation.SolverHandler
@@ -289,60 +294,6 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: MixedReality.Toolkit.Core
-    fullTypeName: MixedReality.Toolkit.StatefulInteractable
-    methodName: ForceSetToggled
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetSlide
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
@@ -388,6 +339,39 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: NextPage
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
@@ -397,231 +381,207 @@ ScriptsOnlyBuild:
   - assembly: MixedReality.Toolkit.Core
     fullTypeName: MixedReality.Toolkit.StatefulInteractable
     methodName: ForceSetToggled
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: MixedReality.Toolkit.Core
+    fullTypeName: MixedReality.Toolkit.StatefulInteractable
+    methodName: ForceSetToggled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: GridToggle
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    fullTypeName: PageHandler
+    methodName: GridToggle
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: MixedReality.Toolkit.Core
+    fullTypeName: MixedReality.Toolkit.StatefulInteractable
+    methodName: ForceSetToggled
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    fullTypeName: PageHandler
+    methodName: LastPage
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -635,44 +595,20 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    fullTypeName: PageHandler
+    methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -680,80 +616,23 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -761,95 +640,59 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
+    methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -857,140 +700,29 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -998,116 +730,80 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -1121,44 +817,38 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    fullTypeName: PageHandler
+    methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
+    methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -1166,140 +856,23 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -1307,245 +880,71 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: SetImage
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
-    fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -1553,95 +952,161 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
+    methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetImage
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: WrapToggle
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: set_layer
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: set_layer
@@ -1649,26 +1114,14 @@ ScriptsOnlyBuild:
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: growP
-  - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: shrinkP
+    methodName: WrapToggle
   - assembly: Assembly-CSharp
     fullTypeName: PageHandler
     methodName: SetImage
   - assembly: Assembly-CSharp
-    fullTypeName: HoverScript
-    methodName: quickSP
-  - assembly: Assembly-CSharp
     fullTypeName: PageHandler
-    methodName: GridToggle
+    methodName: WrapToggle
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1684,12 +1137,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: HandButtons
     methodName: ActSFT
+  - assembly: Assembly-CSharp
+    fullTypeName: PageHandler
+    methodName: SetSlide
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: HandButtons
+    methodName: ActWrap
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -1753,189 +1212,197 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16724}
+      Script: {instanceID: 16810}
     - Class: 114
-      Script: {instanceID: 16778}
+      Script: {instanceID: 16816}
     - Class: 114
-      Script: {instanceID: 16784}
+      Script: {instanceID: 16934}
     - Class: 114
-      Script: {instanceID: 16896}
+      Script: {instanceID: 16964}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 17014}
     - Class: 114
-      Script: {instanceID: 16970}
+      Script: {instanceID: 17292}
     - Class: 114
-      Script: {instanceID: 17226}
+      Script: {instanceID: 17976}
     - Class: 114
-      Script: {instanceID: 17854}
+      Script: {instanceID: 18060}
     - Class: 114
-      Script: {instanceID: 17928}
+      Script: {instanceID: 18404}
     - Class: 114
-      Script: {instanceID: 18380}
+      Script: {instanceID: 18552}
     - Class: 114
-      Script: {instanceID: 18382}
+      Script: {instanceID: 18554}
     - Class: 114
-      Script: {instanceID: 18402}
+      Script: {instanceID: 18576}
     - Class: 114
-      Script: {instanceID: 18538}
+      Script: {instanceID: 18718}
     - Class: 114
-      Script: {instanceID: 18756}
+      Script: {instanceID: 18956}
     - Class: 114
-      Script: {instanceID: 18788}
+      Script: {instanceID: 18988}
     - Class: 114
-      Script: {instanceID: 18832}
+      Script: {instanceID: 19032}
     - Class: 114
-      Script: {instanceID: 18884}
+      Script: {instanceID: 19092}
     - Class: 114
-      Script: {instanceID: 18932}
+      Script: {instanceID: 19142}
     - Class: 114
-      Script: {instanceID: 18966}
+      Script: {instanceID: 19176}
     - Class: 114
-      Script: {instanceID: 19102}
+      Script: {instanceID: 19322}
     - Class: 114
-      Script: {instanceID: 19274}
+      Script: {instanceID: 19508}
     - Class: 114
-      Script: {instanceID: 19320}
+      Script: {instanceID: 19554}
     - Class: 114
-      Script: {instanceID: 19356}
+      Script: {instanceID: 19594}
     - Class: 114
-      Script: {instanceID: 19468}
+      Script: {instanceID: 19720}
     - Class: 114
-      Script: {instanceID: 19558}
+      Script: {instanceID: 19816}
     - Class: 114
-      Script: {instanceID: 19948}
+      Script: {instanceID: 20234}
     - Class: 114
-      Script: {instanceID: 19982}
+      Script: {instanceID: 20270}
     - Class: 114
-      Script: {instanceID: 20192}
+      Script: {instanceID: 20490}
     - Class: 114
-      Script: {instanceID: 20502}
+      Script: {instanceID: 20822}
     - Class: 114
-      Script: {instanceID: 20540}
+      Script: {instanceID: 20866}
     - Class: 114
-      Script: {instanceID: 20700}
+      Script: {instanceID: 21038}
     - Class: 114
-      Script: {instanceID: 20766}
+      Script: {instanceID: 21106}
     - Class: 114
-      Script: {instanceID: 20800}
+      Script: {instanceID: 21140}
     - Class: 114
-      Script: {instanceID: 20836}
+      Script: {instanceID: 21176}
     - Class: 114
-      Script: {instanceID: 20844}
+      Script: {instanceID: 21188}
     - Class: 114
-      Script: {instanceID: 20894}
+      Script: {instanceID: 21242}
     - Class: 114
-      Script: {instanceID: 21200}
+      Script: {instanceID: 21282}
     - Class: 114
-      Script: {instanceID: 21236}
+      Script: {instanceID: 21578}
     - Class: 114
-      Script: {instanceID: 21372}
+      Script: {instanceID: 21620}
     - Class: 114
-      Script: {instanceID: 21504}
+      Script: {instanceID: 21766}
     - Class: 114
-      Script: {instanceID: 21678}
+      Script: {instanceID: 21910}
     - Class: 114
-      Script: {instanceID: 21738}
+      Script: {instanceID: 22094}
     - Class: 114
-      Script: {instanceID: 22078}
+      Script: {instanceID: 22158}
     - Class: 114
-      Script: {instanceID: 22164}
+      Script: {instanceID: 22342}
     - Class: 114
-      Script: {instanceID: 22266}
+      Script: {instanceID: 22528}
     - Class: 114
-      Script: {instanceID: 22364}
+      Script: {instanceID: 22620}
     - Class: 114
-      Script: {instanceID: 22422}
+      Script: {instanceID: 22730}
     - Class: 114
-      Script: {instanceID: 22524}
+      Script: {instanceID: 22836}
     - Class: 114
-      Script: {instanceID: 22734}
+      Script: {instanceID: 22900}
     - Class: 114
-      Script: {instanceID: 22886}
+      Script: {instanceID: 23012}
     - Class: 114
-      Script: {instanceID: 22898}
+      Script: {instanceID: 23244}
     - Class: 114
-      Script: {instanceID: 22988}
+      Script: {instanceID: 23406}
     - Class: 114
-      Script: {instanceID: 23128}
+      Script: {instanceID: 23420}
     - Class: 114
-      Script: {instanceID: 23294}
+      Script: {instanceID: 23522}
     - Class: 114
-      Script: {instanceID: 23524}
+      Script: {instanceID: 23666}
     - Class: 114
-      Script: {instanceID: 23652}
+      Script: {instanceID: 23848}
     - Class: 114
-      Script: {instanceID: 23668}
+      Script: {instanceID: 23926}
     - Class: 114
-      Script: {instanceID: 23842}
+      Script: {instanceID: 24100}
     - Class: 114
-      Script: {instanceID: 23902}
+      Script: {instanceID: 24170}
     - Class: 114
-      Script: {instanceID: 24052}
+      Script: {instanceID: 24246}
     - Class: 114
-      Script: {instanceID: 24106}
+      Script: {instanceID: 24262}
     - Class: 114
-      Script: {instanceID: 24158}
+      Script: {instanceID: 24266}
     - Class: 114
-      Script: {instanceID: 24220}
+      Script: {instanceID: 24376}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 24450}
     - Class: 114
-      Script: {instanceID: 24716}
+      Script: {instanceID: 24514}
     - Class: 114
-      Script: {instanceID: 24744}
+      Script: {instanceID: 24678}
     - Class: 114
-      Script: {instanceID: 24776}
+      Script: {instanceID: 24732}
     - Class: 114
-      Script: {instanceID: 24880}
+      Script: {instanceID: 24788}
     - Class: 114
-      Script: {instanceID: 25032}
-    - Class: 114
-      Script: {instanceID: 25066}
-    - Class: 114
-      Script: {instanceID: 25098}
-    - Class: 114
-      Script: {instanceID: 25180}
-    - Class: 114
-      Script: {instanceID: 25220}
+      Script: {instanceID: 24862}
     - Class: 114
       Script: {instanceID: 25246}
     - Class: 114
-      Script: {instanceID: 25360}
+      Script: {instanceID: 25402}
     - Class: 114
-      Script: {instanceID: 25592}
+      Script: {instanceID: 25430}
     - Class: 114
-      Script: {instanceID: 25648}
+      Script: {instanceID: 25464}
     - Class: 114
-      Script: {instanceID: 25696}
+      Script: {instanceID: 25578}
     - Class: 114
-      Script: {instanceID: 25870}
+      Script: {instanceID: 25738}
     - Class: 114
-      Script: {instanceID: 26176}
+      Script: {instanceID: 25778}
     - Class: 114
-      Script: {instanceID: 26242}
+      Script: {instanceID: 25812}
     - Class: 114
-      Script: {instanceID: 26558}
+      Script: {instanceID: 25828}
     - Class: 114
-      Script: {instanceID: 26672}
+      Script: {instanceID: 25910}
     - Class: 114
-      Script: {instanceID: 26702}
+      Script: {instanceID: 25952}
     - Class: 114
-      Script: {instanceID: 26760}
+      Script: {instanceID: 25978}
     - Class: 114
-      Script: {instanceID: 26918}
+      Script: {instanceID: 26100}
     - Class: 114
-      Script: {instanceID: 26986}
+      Script: {instanceID: 26360}
     - Class: 114
-      Script: {instanceID: 27038}
+      Script: {instanceID: 26420}
     - Class: 114
-      Script: {instanceID: 27272}
+      Script: {instanceID: 26472}
     - Class: 114
-      Script: {instanceID: 27584}
+      Script: {instanceID: 26658}
     - Class: 114
-      Script: {instanceID: 28164}
+      Script: {instanceID: 26994}
     - Class: 114
-      Script: {instanceID: 28204}
+      Script: {instanceID: 27066}
+    - Class: 114
+      Script: {instanceID: 27404}
+    - Class: 114
+      Script: {instanceID: 27520}
+    - Class: 114
+      Script: {instanceID: 27552}
+    - Class: 114
+      Script: {instanceID: 27616}
+    - Class: 114
+      Script: {instanceID: 27778}
+    - Class: 114
+      Script: {instanceID: 27794}
+    - Class: 114
+      Script: {instanceID: 27866}
+    - Class: 114
+      Script: {instanceID: 27920}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1961,12 +1428,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: b1c602ae2a512ab883a6a47feddb8e0d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PageHandler
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -2005,6 +1466,12 @@ ScriptsOnlyBuild:
     className: ClippingSphere
   - hash:
       serializedVersion: 2
+      Hash: 7e0706bf120aeabb33d946ba8e021337
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
+    className: XRGeneralGrabTransformer
+  - hash:
+      serializedVersion: 2
       Hash: e46ef85fefbd22ad17e337d5e8704e26
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
@@ -2021,6 +1488,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: f1a1fac39f7caba42c072d3c1c7d3a2e
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Filtering
+    className: XRPokeFilter
   - hash:
       serializedVersion: 2
       Hash: 00bbd9db8634496d079d17711b2ff7c4
@@ -2047,6 +1520,30 @@ ScriptsOnlyBuild:
     className: SimulatorControlScheme
   - hash:
       serializedVersion: 2
+      Hash: 1ae8d89e569117f5c910547ee8dd28f4
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: ActionBasedController
+  - hash:
+      serializedVersion: 2
+      Hash: 694a7326a7ff60f8b2aa39cfe4636485
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
+    className: LazyFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 618c25b927ee3d8c19037715838137c8
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
+    className: Vector2AffordanceThemeDatum
+  - hash:
+      serializedVersion: 2
+      Hash: 453fac17b39c2572ed8b7e4bdfda83a2
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: TeleportationArea
+  - hash:
+      serializedVersion: 2
       Hash: 70aa4ee689d87b9601a7798eedf6d382
     assemblyName: Unity.XR.OpenXR
     namespaceName: UnityEngine.XR.OpenXR
@@ -2057,6 +1554,12 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.Input
     namespaceName: MixedReality.Toolkit.Input
     className: MRTKRayReticleVisual
+  - hash:
+      serializedVersion: 2
+      Hash: d1bc34b2268adaf4386cd512b5617f8c
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
+    className: ColorAffordanceThemeDatum
   - hash:
       serializedVersion: 2
       Hash: 13f2fac9f3c6f3efa9575deacd0f768d
@@ -2089,16 +1592,46 @@ ScriptsOnlyBuild:
     className: ARParticipantManager
   - hash:
       serializedVersion: 2
+      Hash: 335ee3b93587102a8cd7f77332bea58d
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
+    className: Vector4AffordanceReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 18df6cd81c791b2b3d9d6069cf1bfa73
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Audio
+    className: AudioAffordanceThemeDatum
+  - hash:
+      serializedVersion: 2
       Hash: 81508e5d97086dbf0923ccab0b47b853
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
     className: MeshInstancer
   - hash:
       serializedVersion: 2
+      Hash: 5b2d9b3bbcdc40de9c34c447d6d2226b
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: ClimbSettingsDatum
+  - hash:
+      serializedVersion: 2
+      Hash: f5c002db5a77cc0d274dba83eef5c26d
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRTintInteractableVisual
+  - hash:
+      serializedVersion: 2
       Hash: 3f9d8a3456a55e8a345f8a7c459d948b
     assemblyName: MixedReality.Toolkit.UXCore
     namespaceName: MixedReality.Toolkit.UX
     className: UXBindingConfigurator
+  - hash:
+      serializedVersion: 2
+      Hash: fceadaba8b09f8882b709102397b29f4
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: TunnelingVignetteController
   - hash:
       serializedVersion: 2
       Hash: c6c92016acef42052165dd1fc8c7ec04
@@ -2111,6 +1644,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 39e9d08953376a1502344af6f59b0396
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
+    className: FloatMaterialPropertyAffordanceReceiver
   - hash:
       serializedVersion: 2
       Hash: 0d38852c830867aafd70863769230e44
@@ -2173,6 +1712,12 @@ ScriptsOnlyBuild:
     className: KeyboardPreview
   - hash:
       serializedVersion: 2
+      Hash: 893c46804c36eb0a5a519e2d69b9a233
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: ClimbProvider
+  - hash:
+      serializedVersion: 2
       Hash: cd6a1b1edf067d8de34adb13e06e9cc8
     assemblyName: Unity.XR.OpenXR
     namespaceName: UnityEngine.XR.OpenXR.Features.Interactions
@@ -2183,6 +1728,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.CoreUtils
     namespaceName: Unity.XR.CoreUtils
     className: OnDestroyNotifier
+  - hash:
+      serializedVersion: 2
+      Hash: 28fd3d045acc780719a17f02073eb448
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: InputField
   - hash:
       serializedVersion: 2
       Hash: 6d394de691f6d0187f61c08889353d0e
@@ -2197,10 +1748,22 @@ ScriptsOnlyBuild:
     className: PokeInteractor
   - hash:
       serializedVersion: 2
+      Hash: 12f3e38fcb0dd9336a48913693af3ff7
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
+    className: Vector4AffordanceThemeDatum
+  - hash:
+      serializedVersion: 2
       Hash: 5816c47b9f434ad65dece50c61a23a6b
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
     className: CanvasMaterialAnimatorGraphicsToolsStandard
+  - hash:
+      serializedVersion: 2
+      Hash: 606ae6173ccedab7dfcb626cbe7b7deb
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
+    className: QuaternionAffordanceReceiver
   - hash:
       serializedVersion: 2
       Hash: b98001682cba83786775c9e415b89a61
@@ -2231,6 +1794,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexShakeA
+  - hash:
+      serializedVersion: 2
+      Hash: 1e123a49f0d24fa3d95a3c9dc70d192e
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: ActionBasedSnapTurnProvider
   - hash:
       serializedVersion: 2
       Hash: 1014038eaef7fa38142f9d8e71a6cd5a
@@ -2275,6 +1844,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 874fdd0187a07d0c661fabca09e260c7
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
+    className: XRTransformStabilizer
+  - hash:
+      serializedVersion: 2
       Hash: 4c660d1fba3901cdb510fb1848c1fe4f
     assemblyName: Unity.XR.ARFoundation.VisualScripting
     namespaceName: UnityEngine.XR.ARFoundation.VisualScripting
@@ -2293,6 +1868,12 @@ ScriptsOnlyBuild:
     className: OpenXRRestarter
   - hash:
       serializedVersion: 2
+      Hash: 6524e645ed1f3d7f86031133baa8958c
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
+    className: ARTransformer
+  - hash:
+      serializedVersion: 2
       Hash: 7bdff9e91edfd9600f92a185def7e34a
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -2303,6 +1884,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSelectMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: a008755455a28146141effb2eaba5224
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Rendering
+    className: MaterialInstanceHelper
+  - hash:
+      serializedVersion: 2
+      Hash: cb002d0c6b06349b8529665b4e704c94
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PageHandler
   - hash:
       serializedVersion: 2
       Hash: 418b67019f13f9684552f2693bae3971
@@ -2425,6 +2018,12 @@ ScriptsOnlyBuild:
     className: CanvasMaterialAnimatorGraphicsToolsTextMeshPro
   - hash:
       serializedVersion: 2
+      Hash: e162b85b373a67aab7f918d5773c2342
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: TeleportationProvider
+  - hash:
+      serializedVersion: 2
       Hash: 1deda86fe7ffd8587afcfe68a02d034c
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -2441,6 +2040,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionDebuggerWindow
+  - hash:
+      serializedVersion: 2
+      Hash: f30c3ca7b1e3399c383a6dae7747574f
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
+    className: ARPlacementInteractable
   - hash:
       serializedVersion: 2
       Hash: 682dfc653b22feea53b38adb3bc66414
@@ -2489,6 +2094,12 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.Input
     namespaceName: MixedReality.Toolkit.Input
     className: FuzzyGazeInteractor
+  - hash:
+      serializedVersion: 2
+      Hash: 4652850d3446ab674045224e0bf9b873
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: DeviceBasedContinuousMoveProvider
   - hash:
       serializedVersion: 2
       Hash: 918e4ac8fdcd3851df9219c691b0c0f9
@@ -2569,6 +2180,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 32c17d53ab55e1f1c0a670f332688cfa
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
+    className: ColorAffordanceReceiver
+  - hash:
+      serializedVersion: 2
       Hash: 916a641dd2fd2e825a83254f3a1c414d
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
@@ -2615,6 +2232,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
     className: RemoteInputPlayerConnection
+  - hash:
+      serializedVersion: 2
+      Hash: 48637cb0b989c5d386e39c1c5108bcdc
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
+    className: Vector3MaterialPropertyAffordanceReceiver
   - hash:
       serializedVersion: 2
       Hash: db9b308769d19e1f9e161df0392c23ca
@@ -2665,6 +2288,18 @@ ScriptsOnlyBuild:
     className: TMPInputFieldNonNativeKeyboardTrigger
   - hash:
       serializedVersion: 2
+      Hash: 1cc77296080210ffe708359009933a26
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpriteAssigner
+  - hash:
+      serializedVersion: 2
+      Hash: ea27088dd2b4ec8ae4df473e5466fd04
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
+    className: Vector2MaterialPropertyAffordanceReceiver
+  - hash:
+      serializedVersion: 2
       Hash: d5096e18b37d56c9e5068c902a5fe8cd
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
@@ -2675,6 +2310,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
     className: TMP_DigitValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 2f83cd990eff2072677c3e2166b657f7
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: ActionBasedContinuousTurnProvider
   - hash:
       serializedVersion: 2
       Hash: 5874b789cd9832847c61ebfa803213af
@@ -2695,13 +2336,19 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: c71608e3993b174e031104af6c52b934
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
+    className: TrackedDevicePhysicsRaycaster
+  - hash:
+      serializedVersion: 2
       Hash: 8cabc74e9c4a8f22c854b7bc1831d288
     assemblyName: MixedReality.Toolkit.SpatialManipulation
     namespaceName: MixedReality.Toolkit.SpatialManipulation
     className: ConstantViewSize
   - hash:
       serializedVersion: 2
-      Hash: 9f921cc8d5ba781d0be3e97554b4b5e3
+      Hash: 7c1165b0f8fd3b69b5351b78f84100f2
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: HandButtons
@@ -2743,10 +2390,22 @@ ScriptsOnlyBuild:
     className: AnimatorMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 5ef75a6d8ea21e24038bea65d5416343
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.State
+    className: XRInteractableAffordanceStateProvider
+  - hash:
+      serializedVersion: 2
       Hash: 9637dcdf3068a91dfe653e61bb82f13d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 8e9d11956fe797fd3f6fab78eb073119
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRPokeInteractor
   - hash:
       serializedVersion: 2
       Hash: d5a62874c66fb613f57e9acacc103ed6
@@ -2765,6 +2424,18 @@ ScriptsOnlyBuild:
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
     className: MeshCombineResultObject
+  - hash:
+      serializedVersion: 2
+      Hash: 5a514d919fdb5758ba0241b798ca1721
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
+    className: CanvasTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 6932133b2e4ade0c7b46a18520172646
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRRayInteractor
   - hash:
       serializedVersion: 2
       Hash: 4f353524ce6564e40764f1ea080b2d85
@@ -2831,6 +2502,12 @@ ScriptsOnlyBuild:
     assemblyName: Microsoft.MixedReality.OpenXR
     namespaceName: Microsoft.MixedReality.OpenXR.Remoting
     className: AppRemotingCoroutineRunner
+  - hash:
+      serializedVersion: 2
+      Hash: b47a71e7178002830b4eb440c4ea1e9c
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: DeviceBasedContinuousTurnProvider
   - hash:
       serializedVersion: 2
       Hash: bee9712b608994de2766f467f445b5d5
@@ -2929,10 +2606,40 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 439c082ac74b0f3ce016f3828d934c20
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation
+    className: XRDeviceSimulatorSettings
+  - hash:
+      serializedVersion: 2
+      Hash: b9b3dcd77c5e4dc6abd87a03894f4e70
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRDirectInteractor
+  - hash:
+      serializedVersion: 2
+      Hash: 2f62ac887e287e80d9c042b0cf140856
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
+    className: BlendShapeAffordanceReceiver
+  - hash:
+      serializedVersion: 2
       Hash: 04f2d6a4db8a670aeb2c87d9ffd08865
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
     className: TMP_TextEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 2047cb748a8018ddd7f95a497435a1f2
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRSimpleInteractable
+  - hash:
+      serializedVersion: 2
+      Hash: e653cd0d19fef3d58629e27149f95e41
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
+    className: ARGestureInteractor
   - hash:
       serializedVersion: 2
       Hash: 4895209f48657ff949db7815a6062743
@@ -2969,6 +2676,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 2608b9062d111e65a912d25d46e66328
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
+    className: QuaternionEulerAffordanceReceiver
   - hash:
       serializedVersion: 2
       Hash: 1d29f482eb791626716c49bd9cd8b55b
@@ -3037,6 +2750,18 @@ ScriptsOnlyBuild:
     className: KeyboardAudio
   - hash:
       serializedVersion: 2
+      Hash: 6a6800d8dccafe01e96f2af7fa059198
+    assemblyName: Unity.XR.Hands
+    namespaceName: UnityEngine.XR.Hands.Gestures
+    className: XRHandPose
+  - hash:
+      serializedVersion: 2
+      Hash: e8f7f200b486523c68f2a4cebae719f5
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Transformation
+    className: UniformTransformScaleAffordanceReceiver
+  - hash:
+      serializedVersion: 2
       Hash: 8fcc161b00f9dca312078a74191a7913
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
@@ -3047,6 +2772,12 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.SpatialManipulation
     namespaceName: MixedReality.Toolkit.SpatialManipulation
     className: Follow
+  - hash:
+      serializedVersion: 2
+      Hash: e2429f69aae094f774400b8c21d30e58
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
+    className: XRDualGrabFreeTransformer
   - hash:
       serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
@@ -3097,6 +2828,12 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
+      Hash: f324769bd3564b217a0b7ba8e39a026d
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation
+    className: XRDeviceSimulator
+  - hash:
+      serializedVersion: 2
       Hash: c4de0ff7e075dd89c9fed5913dd775d2
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
@@ -3127,6 +2864,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 8eac389ec05cab579306153191825e07
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRInteractableSnapVolume
+  - hash:
+      serializedVersion: 2
       Hash: 9eccc4340fcd994586e0dcb134c4612e
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -3143,6 +2886,12 @@ ScriptsOnlyBuild:
     assemblyName: Microsoft.MixedReality.OpenXR
     namespaceName: Microsoft.MixedReality.OpenXR.Remoting
     className: AppRemotingPlugin
+  - hash:
+      serializedVersion: 2
+      Hash: 6178d023a137c80e38c578310bdb55c4
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Utilities
+    className: DisposableManagerSingleton
   - hash:
       serializedVersion: 2
       Hash: fe03627c47e56a44c48887b1b0c5daf5
@@ -3205,6 +2954,12 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 70c2b76d8470898b0626d9db549c1daa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HoverScript
+  - hash:
+      serializedVersion: 2
       Hash: 5f76ada1d147da9a197cd20aec88c700
     assemblyName: Unity.XR.ARFoundation.VisualScripting
     namespaceName: UnityEngine.XR.ARFoundation.VisualScripting
@@ -3215,6 +2970,12 @@ ScriptsOnlyBuild:
     assemblyName: Microsoft.MixedReality.OpenXR
     namespaceName: Microsoft.MixedReality.OpenXR
     className: ControllerModelArticulator
+  - hash:
+      serializedVersion: 2
+      Hash: 0200e51f09e15d6021967bfcea97bc7a
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: TwoHandedGrabMoveProvider
   - hash:
       serializedVersion: 2
       Hash: 0f19765290d81f9e93eff7828a091d40
@@ -3247,6 +3008,12 @@ ScriptsOnlyBuild:
     className: ArmModel
   - hash:
       serializedVersion: 2
+      Hash: d19bc70837003de5d3cb030aae206328
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRControllerRecorder
+  - hash:
+      serializedVersion: 2
       Hash: d5c773ba3fe2d773e84a5f19d6f123b9
     assemblyName: MixedReality.Toolkit.Input
     namespaceName: MixedReality.Toolkit.Input
@@ -3259,7 +3026,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 0f6497859ca51e64e3349dc1443d216f
+      Hash: bfbe24f2bce98489b1e336c9f865abec
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BorderScript
@@ -3313,10 +3080,22 @@ ScriptsOnlyBuild:
     className: BoundsHandleInteractable
   - hash:
       serializedVersion: 2
+      Hash: addad52c22ce96635de75d120f75d898
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
+    className: XRLegacyGrabTransformer
+  - hash:
+      serializedVersion: 2
       Hash: f854af586011dd194574f89546642e29
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: a40ff9c311f838dad2ae6eb74a58bab2
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRInteractorLineVisual
   - hash:
       serializedVersion: 2
       Hash: 11a492830b189fafb9ed2f7afa464c56
@@ -3331,16 +3110,16 @@ ScriptsOnlyBuild:
     className: CanvasMaterialAnimatorGraphicsToolsStandardCanvas
   - hash:
       serializedVersion: 2
-      Hash: a3e4c9eb4ec7993eb380089d098c7947
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GridScript
-  - hash:
-      serializedVersion: 2
       Hash: 136f80fb6429f04c776ade9abcf4a740
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARPointCloudMeshVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 67ef8e5b60ab6635129d18320324656b
+    assemblyName: Unity.XR.Hands
+    namespaceName: UnityEngine.XR.Hands.Gestures
+    className: XRHandShape
   - hash:
       serializedVersion: 2
       Hash: c8758db20605d1a649cfebf581a8858a
@@ -3353,6 +3132,12 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.UXCore
     namespaceName: MixedReality.Toolkit.UX
     className: SliderSounds
+  - hash:
+      serializedVersion: 2
+      Hash: 8515cbe6acf1ce11b7905b0b2ff8e89d
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRGazeAssistance
   - hash:
       serializedVersion: 2
       Hash: 60a8b8913a8e37d88c78a870f6221a28
@@ -3371,6 +3156,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 7f0ceb73fccde0ba1f713adf051df42c
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: TeleportationAnchor
   - hash:
       serializedVersion: 2
       Hash: 1bc6ff8d02d2d68019aa6a028f8d409d
@@ -3413,6 +3204,18 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.UXCore
     namespaceName: MixedReality.Toolkit.UX
     className: ToggleCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 668220ad7f1027853b1f1384affc8679
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.UI
+    className: ImageColorAffordanceReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 583254a1619dbe3cde701bf77653e297
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRRig
   - hash:
       serializedVersion: 2
       Hash: 963c15793a023cb75c6ab6c2968822e9
@@ -3469,6 +3272,12 @@ ScriptsOnlyBuild:
     className: XRReferenceObjectLibrary
   - hash:
       serializedVersion: 2
+      Hash: 587df0db9a42812c0e13b99a6e3f7665
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.Hands
+    className: HandExpressionCapture
+  - hash:
+      serializedVersion: 2
       Hash: 6ddf94363c6ce4b02d9fdd51290cb0f9
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestRunner.Utils
@@ -3485,6 +3294,12 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.UXCore
     namespaceName: MixedReality.Toolkit.UX
     className: UGUIInputAdapter
+  - hash:
+      serializedVersion: 2
+      Hash: 263b80439713e18eff90f363958621ea
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI.BodyUI
+    className: HandMenu
   - hash:
       serializedVersion: 2
       Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
@@ -3517,10 +3332,10 @@ ScriptsOnlyBuild:
     className: TapToPlace
   - hash:
       serializedVersion: 2
-      Hash: d0e1091250c3a84ca81d3d52de2f519d
+      Hash: a3be9e02c9cd8eed63b00f207d5caf77
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: HoverScript
+    className: HoverScript2
   - hash:
       serializedVersion: 2
       Hash: c29d2133e27b828d2c27b04509219ea1
@@ -3553,6 +3368,12 @@ ScriptsOnlyBuild:
     className: HPMixedRealityControllerProfile
   - hash:
       serializedVersion: 2
+      Hash: 07b28a9e25d831c17a442012a4dbb96e
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
+    className: CanvasOptimizer
+  - hash:
+      serializedVersion: 2
       Hash: 7da0d82258711ad36a824e2322d48dba
     assemblyName: MixedReality.Toolkit.SpatialManipulation
     namespaceName: MixedReality.Toolkit.SpatialManipulation
@@ -3575,6 +3396,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: 9e2e083e6d57c49b2e511bccb0783d8c
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
+    className: ARSelectionInteractable
+  - hash:
+      serializedVersion: 2
+      Hash: b58bff8f1d853885ababdc1267e9589d
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Filtering
+    className: PokeThresholdDatum
   - hash:
       serializedVersion: 2
       Hash: 942cafc8a9011951514d173a77b7b089
@@ -3601,6 +3434,12 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
+      Hash: 638217bdb4c3c785548bb6f30015afeb
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
+    className: ColorGradientLineRendererAffordanceReceiver
+  - hash:
+      serializedVersion: 2
       Hash: 86344100c716167fb86137c127ca9eee
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
@@ -3619,10 +3458,22 @@ ScriptsOnlyBuild:
     className: MinMaxScaleConstraint
   - hash:
       serializedVersion: 2
+      Hash: d76ec298010d9df2a958b76a77f74945
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRInteractionGroup
+  - hash:
+      serializedVersion: 2
       Hash: 5b8b7230ad968399f6726aa1269dcdcb
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: faa492400b66799e48deeb82d5a179ab
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: ClimbInteractable
   - hash:
       serializedVersion: 2
       Hash: 1ea0dea16f7b720fbdb8dd7b82fe866f
@@ -3649,6 +3500,12 @@ ScriptsOnlyBuild:
     className: ARTrackedImage
   - hash:
       serializedVersion: 2
+      Hash: 5c616208e2099c2f4ef75e2328f94642
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRGrabInteractable
+  - hash:
+      serializedVersion: 2
       Hash: e6f8333cc8a800e2866870a5ef7efc35
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -3659,6 +3516,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.VisualScripting
     namespaceName: UnityEngine.XR.ARFoundation.VisualScripting
     className: ARPointCloudManagerListener
+  - hash:
+      serializedVersion: 2
+      Hash: 27c9fb31de4ab6a12a90c8f5edce1a59
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Filtering
+    className: XRTargetFilter
   - hash:
       serializedVersion: 2
       Hash: 935c228534bc169b3cd30d8cc4b526a1
@@ -3679,10 +3542,28 @@ ScriptsOnlyBuild:
     className: SolverHandler
   - hash:
       serializedVersion: 2
+      Hash: 5d6b234d16233ee93ef50ce45c1c76f4
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
+    className: ARScaleInteractable
+  - hash:
+      serializedVersion: 2
       Hash: 1d91f086857c1cd22c7e75343950ee5a
     assemblyName: Unity.XR.Hands
     namespaceName: UnityEngine.XR.Hands
     className: XRHandSkeletonDriver
+  - hash:
+      serializedVersion: 2
+      Hash: f48da21dccbde338587f4f039d2649a2
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRGazeInteractor
+  - hash:
+      serializedVersion: 2
+      Hash: 17aa72f91d486d6ecf25cdb6ccd1ac8c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HoverScript3
   - hash:
       serializedVersion: 2
       Hash: c67fed51bde67baee143e72e4ea37178
@@ -3709,6 +3590,12 @@ ScriptsOnlyBuild:
     className: SeeItSayItLabelEnabler
   - hash:
       serializedVersion: 2
+      Hash: d380664f93ddac7e992518341c2ee91c
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: InteractionLayerSettings
+  - hash:
+      serializedVersion: 2
       Hash: 42284ecb06b05bfc619be3758fa5dd7a
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
@@ -3731,6 +3618,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_UiFrameRateCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 3f04cc0700923c2d815479050925a9c6
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRInteractionManager
   - hash:
       serializedVersion: 2
       Hash: b747f5d40674055dd70e18552f1b0447
@@ -3829,6 +3722,12 @@ ScriptsOnlyBuild:
     className: ARTrackedObjectManager
   - hash:
       serializedVersion: 2
+      Hash: ee2d606ac26fe34a9f7a098462d9d353
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: LocomotionSystem
+  - hash:
+      serializedVersion: 2
       Hash: 7fe4cc923578d80b246471921934cdf2
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
@@ -3883,6 +3782,12 @@ ScriptsOnlyBuild:
     className: FixedRotationToUserConstraint
   - hash:
       serializedVersion: 2
+      Hash: f96371a82ac8b330a73104bec58f0d49
+    assemblyName: Unity.XR.Hands
+    namespaceName: UnityEngine.XR.Hands.OpenXR
+    className: MetaHandTrackingAim
+  - hash:
+      serializedVersion: 2
       Hash: 8787da68acbcc2f439d01ee75c474214
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
@@ -3931,6 +3836,12 @@ ScriptsOnlyBuild:
     className: ARTrackedImageManager
   - hash:
       serializedVersion: 2
+      Hash: 9e2356556655e72a2d85fc74ecfcf3c6
+    assemblyName: Unity.XR.Hands
+    namespaceName: UnityEngine.XR.Hands
+    className: XRHandTrackingEvents
+  - hash:
+      serializedVersion: 2
       Hash: ca0b1e5e177d32220d685f0060cc8de5
     assemblyName: Unity.XR.OpenXR
     namespaceName: UnityEngine.XR.OpenXR.Features.Interactions
@@ -3941,6 +3852,12 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.SpatialManipulation
     namespaceName: MixedReality.Toolkit.SpatialManipulation
     className: HandConstraint
+  - hash:
+      serializedVersion: 2
+      Hash: 82ca4776eb3cfafbdec97b1131c6e21e
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
+    className: FloatAffordanceThemeDatum
   - hash:
       serializedVersion: 2
       Hash: 0b63f6d3335e11939ce8790b904c8691
@@ -3961,10 +3878,22 @@ ScriptsOnlyBuild:
     className: SceneVariables
   - hash:
       serializedVersion: 2
+      Hash: fd0bbc09eda7d7fdb8d45d0edc12bd38
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
+    className: XRUIInputModule
+  - hash:
+      serializedVersion: 2
       Hash: ceeb6c51b89f022a3deb7b3408c66745
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
+      Hash: 517165ca1fb696abac1007addd564330
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
+    className: Vector3AffordanceThemeDatum
   - hash:
       serializedVersion: 2
       Hash: f2098fcd8ee983a05ec192f63904298f
@@ -4129,10 +4058,22 @@ ScriptsOnlyBuild:
     className: ClippingPlane
   - hash:
       serializedVersion: 2
+      Hash: 2292170f5daf07a8bc65558746eac195
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Audio
+    className: AudioAffordanceReceiver
+  - hash:
+      serializedVersion: 2
       Hash: f8c68b4daec35c2f7be4bd6906325d66
     assemblyName: MixedReality.Toolkit.Core
     namespaceName: MixedReality.Toolkit.Subsystems
     className: MRTKLifecycleManager
+  - hash:
+      serializedVersion: 2
+      Hash: 89e7bef84def1b2cdb9e018610c96543
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRController
   - hash:
       serializedVersion: 2
       Hash: 7110c8933517325905d7d78e08dd435d
@@ -4171,10 +4112,22 @@ ScriptsOnlyBuild:
     className: PlayerInputManagerEditor
   - hash:
       serializedVersion: 2
+      Hash: f8bd363577410bf09488b89bb7f552c0
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRScreenSpaceController
+  - hash:
+      serializedVersion: 2
       Hash: 92673ca3060f08a3942a8a5d2142a532
     assemblyName: MixedReality.Toolkit.UXCore
     namespaceName: MixedReality.Toolkit.UX.Experimental
     className: NonNativeValueKey
+  - hash:
+      serializedVersion: 2
+      Hash: 45da5a1b1071600a8c95300a5554f064
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
+    className: InputActionManager
   - hash:
       serializedVersion: 2
       Hash: 35e0b31791c377513b6fc7b9568c50cd
@@ -4193,6 +4146,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: e2e54a8c15fcc5895cc626acfbd968bd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RenameChildren
   - hash:
       serializedVersion: 2
       Hash: f575854bcd9263bcceb3a0f2b8f26e82
@@ -4249,10 +4208,34 @@ ScriptsOnlyBuild:
     className: HandInteractionProfile
   - hash:
       serializedVersion: 2
+      Hash: 2cec710e4ef8cb4582b8d556bd4c51a4
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.State
+    className: XRInteractorAffordanceStateProvider
+  - hash:
+      serializedVersion: 2
       Hash: 87843335a09740b818e4519c1b88b2da
     assemblyName: MixedReality.Toolkit.Core
     namespaceName: MixedReality.Toolkit
     className: CameraSettingsManager
+  - hash:
+      serializedVersion: 2
+      Hash: c1ed804c7075ac7384c50a5385e3e4fe
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
+    className: Vector2AffordanceReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: b1af789db269d5efafd5ff3e17a1bf07
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
+    className: XRInputModalityManager
+  - hash:
+      serializedVersion: 2
+      Hash: b71680be5fcafa98e1f2ee4abd69ab57
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: CharacterControllerDriver
   - hash:
       serializedVersion: 2
       Hash: 79b775b77d761cec6916c5f6d0fc04a0
@@ -4277,6 +4260,18 @@ ScriptsOnlyBuild:
     assemblyName: MixedReality.Toolkit.UXCore
     namespaceName: MixedReality.Toolkit.UX.Deprecated
     className: DialogShell
+  - hash:
+      serializedVersion: 2
+      Hash: 8ff1d0df3dc6f9b6415fc1717c93a2c8
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRSocketInteractor
+  - hash:
+      serializedVersion: 2
+      Hash: dfd627efe78b3cc1291aca8787c18ca6
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
+    className: Vector3AffordanceReceiver
   - hash:
       serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
@@ -4325,6 +4320,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a82120afb3d30a17a85d6c4d8dfb2e4f
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
+    className: ARRotationInteractable
   - hash:
       serializedVersion: 2
       Hash: b9b6aa8cfaba44cf350403d8ed7eccb4
@@ -4393,10 +4394,22 @@ ScriptsOnlyBuild:
     className: TMP_FrameRateCounter
   - hash:
       serializedVersion: 2
+      Hash: 541ec1caff7c293b0e3c87705936977c
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
+    className: ARAnnotationInteractable
+  - hash:
+      serializedVersion: 2
       Hash: 1ccbe501b98ca759ca0ddb02fcd3a4ae
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARAnchorManager
+  - hash:
+      serializedVersion: 2
+      Hash: b8d0f2ba920c16bcebce2f1f3c5d829b
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRInteractorReticleVisual
   - hash:
       serializedVersion: 2
       Hash: 31d8619649dfd86f64a23fdaa45e4421
@@ -4411,6 +4424,12 @@ ScriptsOnlyBuild:
     className: CanvasElementMesh
   - hash:
       serializedVersion: 2
+      Hash: d67d810308477482296430a133610330
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
+    className: XRHandSkeletonPokeDisplacer
+  - hash:
+      serializedVersion: 2
       Hash: 17142b03663387290480c82303274c02
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -4423,10 +4442,34 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: 5917642ace0eae93c20a9c11477d7477
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
+    className: ColorMaterialPropertyAffordanceReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 0dd5a08e9677d0d907afe16a76f0ce38
+    assemblyName: Unity.XR.Hands
+    namespaceName: UnityEngine.XR.Hands.OpenXR
+    className: HandTracking
+  - hash:
+      serializedVersion: 2
+      Hash: 97c010e1235075ea174008374b95a636
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
+    className: XRSingleGrabFreeTransformer
+  - hash:
+      serializedVersion: 2
       Hash: 67f2e533bbfe68206e21fd8cf233561c
     assemblyName: UnityEngine.SpatialTracking
     namespaceName: UnityEngine.SpatialTracking
     className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
+      Hash: 96d9bba9e31316466ecf589b51e83ca6
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: XRControllerRecording
   - hash:
       serializedVersion: 2
       Hash: c4b85a67513b4f0cf7b5fb2d5ded04b0
@@ -4439,6 +4482,12 @@ ScriptsOnlyBuild:
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
     className: CanvasMaterialAnimatorCanvasRadialSpinner
+  - hash:
+      serializedVersion: 2
+      Hash: 5f5a1b73d1d39c2caecc49dd4297bec4
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
+    className: ARTranslationInteractable
   - hash:
       serializedVersion: 2
       Hash: 7bb32d6e4c7614a97d9723ce7e26588c
@@ -4513,6 +4562,12 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: edf9af2f8c4f15e7195554dd38c33d45
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: DeviceBasedSnapTurnProvider
+  - hash:
+      serializedVersion: 2
       Hash: 4aa75eebe5b8b3bd362b4adcad58df8f
     assemblyName: Unity.XR.OpenXR.Features.MockRuntime
     namespaceName: UnityEngine.XR.OpenXR.Features.Mock
@@ -4549,10 +4604,22 @@ ScriptsOnlyBuild:
     className: AnimationCurveDatum
   - hash:
       serializedVersion: 2
+      Hash: 014eb4aa02bd1ce2f573893b9a1caf5b
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: ActionBasedContinuousMoveProvider
+  - hash:
+      serializedVersion: 2
       Hash: dbe80c9dc024d18e75107a0b4da06133
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.UI
     className: InputSystemUIInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: caeca3096dfc9c4b033729f7ea989c0a
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
+    className: FloatAffordanceReceiver
   - hash:
       serializedVersion: 2
       Hash: 0575906244f645094d8c95283b43f340
@@ -4615,10 +4682,22 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 172ade1364d05357755d7c4960b9b9f5
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI.BodyUI
+    className: FollowPresetDatum
+  - hash:
+      serializedVersion: 2
       Hash: 4eed6cbb7e35dc1c168f67943a4ceba3
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARFaceManager
+  - hash:
+      serializedVersion: 2
+      Hash: ad1a96300e856d5c0ed71e6a72f6a89e
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
+    className: TrackedDeviceGraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: 8aa53a78f29ddf9b15dee823fcbd2c6f
@@ -4651,6 +4730,24 @@ ScriptsOnlyBuild:
     className: FloatDatum
   - hash:
       serializedVersion: 2
+      Hash: 0b866ba878903b13895eab6a32ae2567
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Rendering
+    className: MaterialPropertyBlockHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 542d7358efb6acc39cfe9b2161372536
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TextureAssigner
+  - hash:
+      serializedVersion: 2
+      Hash: 7c76e474fd86afe13228253261106fd8
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit
+    className: GrabMoveProvider
+  - hash:
+      serializedVersion: 2
       Hash: 829c9c3b436db2480298809426a869ee
     assemblyName: MixedReality.Toolkit.Input
     namespaceName: MixedReality.Toolkit.Input
@@ -4675,6 +4772,12 @@ ScriptsOnlyBuild:
     className: ARFaceMeshVisualizer
   - hash:
       serializedVersion: 2
+      Hash: e597a0bb42818c3e8bdf342397355665
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
+    className: Vector4MaterialPropertyAffordanceReceiver
+  - hash:
+      serializedVersion: 2
       Hash: 225a6e1b4773ce637fb1f676b893cbe9
     assemblyName: Microsoft.MixedReality.GraphicsTools
     namespaceName: Microsoft.MixedReality.GraphicsTools
@@ -4697,619 +4800,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 8ff1d0df3dc6f9b6415fc1717c93a2c8
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRSocketInteractor
-  - hash:
-      serializedVersion: 2
-      Hash: 7e0706bf120aeabb33d946ba8e021337
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
-    className: XRGeneralGrabTransformer
-  - hash:
-      serializedVersion: 2
-      Hash: e162b85b373a67aab7f918d5773c2342
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: TeleportationProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 45da5a1b1071600a8c95300a5554f064
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
-    className: InputActionManager
-  - hash:
-      serializedVersion: 2
-      Hash: f1a1fac39f7caba42c072d3c1c7d3a2e
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Filtering
-    className: XRPokeFilter
-  - hash:
-      serializedVersion: 2
-      Hash: 27c9fb31de4ab6a12a90c8f5edce1a59
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Filtering
-    className: XRTargetFilter
-  - hash:
-      serializedVersion: 2
-      Hash: 2f83cd990eff2072677c3e2166b657f7
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: ActionBasedContinuousTurnProvider
-  - hash:
-      serializedVersion: 2
-      Hash: fceadaba8b09f8882b709102397b29f4
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: TunnelingVignetteController
-  - hash:
-      serializedVersion: 2
-      Hash: 28fd3d045acc780719a17f02073eb448
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 638217bdb4c3c785548bb6f30015afeb
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
-    className: ColorGradientLineRendererAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 1e123a49f0d24fa3d95a3c9dc70d192e
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: ActionBasedSnapTurnProvider
-  - hash:
-      serializedVersion: 2
-      Hash: dfd627efe78b3cc1291aca8787c18ca6
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
-    className: Vector3AffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: b9b3dcd77c5e4dc6abd87a03894f4e70
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRDirectInteractor
-  - hash:
-      serializedVersion: 2
-      Hash: 39e9d08953376a1502344af6f59b0396
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
-    className: FloatMaterialPropertyAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: b1af789db269d5efafd5ff3e17a1bf07
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
-    className: XRInputModalityManager
-  - hash:
-      serializedVersion: 2
-      Hash: 48637cb0b989c5d386e39c1c5108bcdc
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
-    className: Vector3MaterialPropertyAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 5b2d9b3bbcdc40de9c34c447d6d2226b
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: ClimbSettingsDatum
-  - hash:
-      serializedVersion: 2
-      Hash: ee2d606ac26fe34a9f7a098462d9d353
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: LocomotionSystem
-  - hash:
-      serializedVersion: 2
-      Hash: 2f62ac887e287e80d9c042b0cf140856
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
-    className: BlendShapeAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: e8f7f200b486523c68f2a4cebae719f5
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Transformation
-    className: UniformTransformScaleAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 3f04cc0700923c2d815479050925a9c6
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRInteractionManager
-  - hash:
-      serializedVersion: 2
-      Hash: 6524e645ed1f3d7f86031133baa8958c
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
-    className: ARTransformer
-  - hash:
-      serializedVersion: 2
-      Hash: f96371a82ac8b330a73104bec58f0d49
-    assemblyName: Unity.XR.Hands
-    namespaceName: UnityEngine.XR.Hands.OpenXR
-    className: MetaHandTrackingAim
-  - hash:
-      serializedVersion: 2
-      Hash: 0b866ba878903b13895eab6a32ae2567
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Rendering
-    className: MaterialPropertyBlockHelper
-  - hash:
-      serializedVersion: 2
-      Hash: a008755455a28146141effb2eaba5224
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Rendering
-    className: MaterialInstanceHelper
-  - hash:
-      serializedVersion: 2
-      Hash: e597a0bb42818c3e8bdf342397355665
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
-    className: Vector4MaterialPropertyAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 07b28a9e25d831c17a442012a4dbb96e
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
-    className: CanvasOptimizer
-  - hash:
-      serializedVersion: 2
-      Hash: 874fdd0187a07d0c661fabca09e260c7
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
-    className: XRTransformStabilizer
-  - hash:
-      serializedVersion: 2
-      Hash: 583254a1619dbe3cde701bf77653e297
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRRig
-  - hash:
-      serializedVersion: 2
-      Hash: 6a6800d8dccafe01e96f2af7fa059198
-    assemblyName: Unity.XR.Hands
-    namespaceName: UnityEngine.XR.Hands.Gestures
-    className: XRHandPose
-  - hash:
-      serializedVersion: 2
-      Hash: d76ec298010d9df2a958b76a77f74945
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRInteractionGroup
-  - hash:
-      serializedVersion: 2
-      Hash: f48da21dccbde338587f4f039d2649a2
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRGazeInteractor
-  - hash:
-      serializedVersion: 2
-      Hash: caeca3096dfc9c4b033729f7ea989c0a
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
-    className: FloatAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 2608b9062d111e65a912d25d46e66328
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
-    className: QuaternionEulerAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: d1bc34b2268adaf4386cd512b5617f8c
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
-    className: ColorAffordanceThemeDatum
-  - hash:
-      serializedVersion: 2
-      Hash: 9e2356556655e72a2d85fc74ecfcf3c6
-    assemblyName: Unity.XR.Hands
-    namespaceName: UnityEngine.XR.Hands
-    className: XRHandTrackingEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 82ca4776eb3cfafbdec97b1131c6e21e
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
-    className: FloatAffordanceThemeDatum
-  - hash:
-      serializedVersion: 2
-      Hash: 67ef8e5b60ab6635129d18320324656b
-    assemblyName: Unity.XR.Hands
-    namespaceName: UnityEngine.XR.Hands.Gestures
-    className: XRHandShape
-  - hash:
-      serializedVersion: 2
-      Hash: e2429f69aae094f774400b8c21d30e58
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
-    className: XRDualGrabFreeTransformer
-  - hash:
-      serializedVersion: 2
-      Hash: 0200e51f09e15d6021967bfcea97bc7a
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: TwoHandedGrabMoveProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 9e2e083e6d57c49b2e511bccb0783d8c
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
-    className: ARSelectionInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: a82120afb3d30a17a85d6c4d8dfb2e4f
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
-    className: ARRotationInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: b8d0f2ba920c16bcebce2f1f3c5d829b
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRInteractorReticleVisual
-  - hash:
-      serializedVersion: 2
-      Hash: 8eac389ec05cab579306153191825e07
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRInteractableSnapVolume
-  - hash:
-      serializedVersion: 2
-      Hash: f8bd363577410bf09488b89bb7f552c0
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRScreenSpaceController
-  - hash:
-      serializedVersion: 2
-      Hash: 2292170f5daf07a8bc65558746eac195
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Audio
-    className: AudioAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 453fac17b39c2572ed8b7e4bdfda83a2
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: TeleportationArea
-  - hash:
-      serializedVersion: 2
-      Hash: e653cd0d19fef3d58629e27149f95e41
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
-    className: ARGestureInteractor
-  - hash:
-      serializedVersion: 2
-      Hash: 6932133b2e4ade0c7b46a18520172646
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRRayInteractor
-  - hash:
-      serializedVersion: 2
-      Hash: 172ade1364d05357755d7c4960b9b9f5
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI.BodyUI
-    className: FollowPresetDatum
-  - hash:
-      serializedVersion: 2
-      Hash: 2cec710e4ef8cb4582b8d556bd4c51a4
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.State
-    className: XRInteractorAffordanceStateProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 668220ad7f1027853b1f1384affc8679
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.UI
-    className: ImageColorAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: b58bff8f1d853885ababdc1267e9589d
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Filtering
-    className: PokeThresholdDatum
-  - hash:
-      serializedVersion: 2
-      Hash: 5917642ace0eae93c20a9c11477d7477
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
-    className: ColorMaterialPropertyAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 8e9d11956fe797fd3f6fab78eb073119
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRPokeInteractor
-  - hash:
-      serializedVersion: 2
-      Hash: d380664f93ddac7e992518341c2ee91c
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: InteractionLayerSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 5ef75a6d8ea21e24038bea65d5416343
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.State
-    className: XRInteractableAffordanceStateProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 893c46804c36eb0a5a519e2d69b9a233
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: ClimbProvider
-  - hash:
-      serializedVersion: 2
-      Hash: addad52c22ce96635de75d120f75d898
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
-    className: XRLegacyGrabTransformer
-  - hash:
-      serializedVersion: 2
-      Hash: 439c082ac74b0f3ce016f3828d934c20
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation
-    className: XRDeviceSimulatorSettings
-  - hash:
-      serializedVersion: 2
-      Hash: ad1a96300e856d5c0ed71e6a72f6a89e
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
-    className: TrackedDeviceGraphicRaycaster
-  - hash:
-      serializedVersion: 2
-      Hash: f5c002db5a77cc0d274dba83eef5c26d
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRTintInteractableVisual
-  - hash:
-      serializedVersion: 2
-      Hash: 618c25b927ee3d8c19037715838137c8
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
-    className: Vector2AffordanceThemeDatum
-  - hash:
-      serializedVersion: 2
-      Hash: 8515cbe6acf1ce11b7905b0b2ff8e89d
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRGazeAssistance
-  - hash:
-      serializedVersion: 2
-      Hash: a40ff9c311f838dad2ae6eb74a58bab2
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRInteractorLineVisual
-  - hash:
-      serializedVersion: 2
-      Hash: 5c616208e2099c2f4ef75e2328f94642
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRGrabInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: 89e7bef84def1b2cdb9e018610c96543
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRController
-  - hash:
-      serializedVersion: 2
-      Hash: b47a71e7178002830b4eb440c4ea1e9c
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: DeviceBasedContinuousTurnProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 694a7326a7ff60f8b2aa39cfe4636485
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
-    className: LazyFollow
-  - hash:
-      serializedVersion: 2
-      Hash: 4652850d3446ab674045224e0bf9b873
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: DeviceBasedContinuousMoveProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 18df6cd81c791b2b3d9d6069cf1bfa73
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Audio
-    className: AudioAffordanceThemeDatum
-  - hash:
-      serializedVersion: 2
-      Hash: ea27088dd2b4ec8ae4df473e5466fd04
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
-    className: Vector2MaterialPropertyAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 2047cb748a8018ddd7f95a497435a1f2
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRSimpleInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: 1ae8d89e569117f5c910547ee8dd28f4
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: ActionBasedController
-  - hash:
-      serializedVersion: 2
-      Hash: 014eb4aa02bd1ce2f573893b9a1caf5b
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: ActionBasedContinuousMoveProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 5d6b234d16233ee93ef50ce45c1c76f4
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
-    className: ARScaleInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: f324769bd3564b217a0b7ba8e39a026d
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation
-    className: XRDeviceSimulator
-  - hash:
-      serializedVersion: 2
-      Hash: 7c76e474fd86afe13228253261106fd8
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: GrabMoveProvider
-  - hash:
-      serializedVersion: 2
-      Hash: fd0bbc09eda7d7fdb8d45d0edc12bd38
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
-    className: XRUIInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 32c17d53ab55e1f1c0a670f332688cfa
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
-    className: ColorAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: d19bc70837003de5d3cb030aae206328
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRControllerRecorder
-  - hash:
-      serializedVersion: 2
-      Hash: 263b80439713e18eff90f363958621ea
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI.BodyUI
-    className: HandMenu
-  - hash:
-      serializedVersion: 2
-      Hash: f30c3ca7b1e3399c383a6dae7747574f
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
-    className: ARPlacementInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: edf9af2f8c4f15e7195554dd38c33d45
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: DeviceBasedSnapTurnProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 97c010e1235075ea174008374b95a636
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Transformers
-    className: XRSingleGrabFreeTransformer
-  - hash:
-      serializedVersion: 2
-      Hash: 5a514d919fdb5758ba0241b798ca1721
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
-    className: CanvasTracker
-  - hash:
-      serializedVersion: 2
-      Hash: c71608e3993b174e031104af6c52b934
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.UI
-    className: TrackedDevicePhysicsRaycaster
-  - hash:
-      serializedVersion: 2
-      Hash: c1ed804c7075ac7384c50a5385e3e4fe
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
-    className: Vector2AffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 5f5a1b73d1d39c2caecc49dd4297bec4
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
-    className: ARTranslationInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: 6178d023a137c80e38c578310bdb55c4
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Utilities
-    className: DisposableManagerSingleton
-  - hash:
-      serializedVersion: 2
-      Hash: d67d810308477482296430a133610330
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
-    className: XRHandSkeletonPokeDisplacer
-  - hash:
-      serializedVersion: 2
-      Hash: 0dd5a08e9677d0d907afe16a76f0ce38
-    assemblyName: Unity.XR.Hands
-    namespaceName: UnityEngine.XR.Hands.OpenXR
-    className: HandTracking
-  - hash:
-      serializedVersion: 2
-      Hash: faa492400b66799e48deeb82d5a179ab
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: ClimbInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: 7f0ceb73fccde0ba1f713adf051df42c
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: TeleportationAnchor
-  - hash:
-      serializedVersion: 2
-      Hash: 335ee3b93587102a8cd7f77332bea58d
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
-    className: Vector4AffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 587df0db9a42812c0e13b99a6e3f7665
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.Hands
-    className: HandExpressionCapture
-  - hash:
-      serializedVersion: 2
-      Hash: 541ec1caff7c293b0e3c87705936977c
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AR
-    className: ARAnnotationInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: 606ae6173ccedab7dfcb626cbe7b7deb
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives
-    className: QuaternionAffordanceReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 517165ca1fb696abac1007addd564330
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
-    className: Vector3AffordanceThemeDatum
-  - hash:
-      serializedVersion: 2
-      Hash: b71680be5fcafa98e1f2ee4abd69ab57
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: CharacterControllerDriver
-  - hash:
-      serializedVersion: 2
-      Hash: 96d9bba9e31316466ecf589b51e83ca6
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit
-    className: XRControllerRecording
-  - hash:
-      serializedVersion: 2
-      Hash: 12f3e38fcb0dd9336a48913693af3ff7
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
-    className: Vector4AffordanceThemeDatum
   platform: 21
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/j2fxs/Desktop/mrpdfbuild
+  playerPath: C:/Users/j2fxs/Desktop/NewPDF-V2

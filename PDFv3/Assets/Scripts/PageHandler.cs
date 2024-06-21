@@ -24,12 +24,12 @@ public class PageHandler : MonoBehaviour
 
     Vector3 userPosition;
     Quaternion userRotation;
-    public float planeD = 2.0f;
-    public float wrapD = 2.0f;
+    public float planeD = 1.35f;
+    public float wrapD = 0.6f;
 
     public int p = 0; //current page number
 
-    private void Start()
+    private void Start()                                                                                                                   
     {
         pages = Resources.LoadAll<Sprite>("Sprites");
 
@@ -66,6 +66,19 @@ public class PageHandler : MonoBehaviour
     public void WrapToggle()
     {
         ViewToggle(pageWrap, wrapD);
+        AdjustWrapPosition();
+    }
+    public void Toggler()
+    {
+        Update();
+        if (pageGrid.activeSelf)
+        {
+            GridToggle();
+        }
+        else if (pageWrap.activeSelf)
+        {
+            WrapToggle();
+        }
     }
 
     public void ViewToggle(GameObject OTT, float D)
@@ -75,9 +88,19 @@ public class PageHandler : MonoBehaviour
         OTT.transform.LookAt(userPosition);
         OTT.transform.rotation = Quaternion.Euler(0.0f, OTT.transform.rotation.eulerAngles.y, 0.0f);
         OTT.transform.Rotate(0f, 180f, 0f);
-
         readingPane.SetActive(!readingPane.activeSelf);
         OTT.SetActive(!OTT.activeSelf);
+    }
+
+    // Call this method to adjust the position and rotation of the wrap GameObject
+    public void AdjustWrapPosition()
+    {
+        // Adjust these values as needed to position the wrap correctly
+        float wrapOffsetX = -0.63f; // Adjust this value to move the wrap left or right
+        float wrapOffsetY = 0.5f; // Adjust this value to move the wrap up or down
+
+        // Apply the offset to the wrap's position
+        pageWrap.transform.position += new Vector3(wrapOffsetX, wrapOffsetY, 0);
     }
 
     public void NextPage()

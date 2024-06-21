@@ -1,0 +1,62 @@
+{
+    "name": "com.magicleap.mrtk3",
+    "displayName": "Magic Leap MRTK3",
+    "version": "1.0.0",
+    "unity": "2022.2",
+    "description": "This package enables and provides utilities for MRTK3 development on the Magic Leap 2.",
+    "keywords": [
+      "magicleap",
+      "ar",
+      "augmented",
+      "xr",
+      "reality",
+      "mrtk",
+      "mrtk3"
+    ],
+    "dependencies": {
+      "com.magicleap.unitysdk": "1.8.0",
+      "org.mixedrealitytoolkit.core": "3.0.0",
+      "org.mixedrealitytoolkit.input": "3.0.0",
+      "org.mixedrealitytoolkit.uxcomponents": "3.0.0",
+      "com.unity.inputsystem": "1.3.0",
+      "com.unity.textmeshpro": "3.0.6",
+      "com.unity.xr.core-utils": "2.1.0",
+      "com.unity.xr.interaction.toolkit": "2.2.0"
+    },
+    "author": {
+        "name": "Magic Leap",
+        "url": "https://developer.magicleap.com/"
+    },
+    "samples": [
+      {
+        "displayName": "Hand And Controller Interaction Examples",
+        "description": "Example scene demonstrating both hand and MagicLeap controller interactions.",
+        "path": "Samples~/HandAndControllerInteractionExamples"
+      },
+      {
+        "displayName": "Eye Tracking Examples",
+        "description": "Example scene demonstrating eye tracking interactions.",
+        "path": "Samples~/EyeTrackingExamples"
+      },
+      {
+        "displayName": "Spatial Awareness Examples",
+        "description": "Example scene demonstrating scene reconstruction.",
+        "path": "Samples~/SpatialAwareness"
+      },
+      {
+        "displayName": "Keyword Recognition Examples",
+        "description": "Example scene demonstrating keyword recognition.",
+        "path": "Samples~/KeywordRecognitionExamples"
+      },
+      {
+        "displayName": "Global and Segmented Dimmer Examples",
+        "description": "Example scene demonstrating the global and segmented dimmer.",
+        "path": "Samples~/GlobalAndSegmentedDimmerExamples"
+      },
+      {
+        "displayName": "Stereo Convergence Detector Examples",
+        "description": "Example scene demonstrating the Stereo Convergence Detector.",
+        "path": "Samples~/StereoConvergenceDetectorExamples"
+      }
+    ]
+}

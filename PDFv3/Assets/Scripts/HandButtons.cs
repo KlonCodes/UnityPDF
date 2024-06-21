@@ -15,8 +15,12 @@ public class HandButtons : MonoBehaviour
     private GameObject ActiveBar;
     private Transform ABTransform;
 
-    void Start()
+    public GameObject Reader;
+
+    public void closePanes()
     {
+        PageHandler pgs = Reader.GetComponent<PageHandler>();
+        pgs.Toggler();
     }
 
     // Update is called once per frame
@@ -26,6 +30,7 @@ public class HandButtons : MonoBehaviour
     public void ActButton()
     {
         GetActiveBar();
+        closePanes();
 
         SlideBar.SetActive(false);
         SFTBar.SetActive(false);
@@ -40,7 +45,7 @@ public class HandButtons : MonoBehaviour
     public void ActSlide()
     {
         GetActiveBar();
-
+        closePanes();
         ButtonBar.SetActive(false);
         SFTBar.SetActive(false);
         WrapBar.SetActive(false);
@@ -53,7 +58,7 @@ public class HandButtons : MonoBehaviour
     public void ActSFT()
     {
         GetActiveBar();
-
+        closePanes();
         ButtonBar.SetActive(false);
         SlideBar.SetActive(false);
         WrapBar.SetActive(false);
@@ -66,6 +71,7 @@ public class HandButtons : MonoBehaviour
     public void ActWrap()
     {
         GetActiveBar();
+        closePanes();
         WrapBar.transform.position = ABTransform.position;
         WrapBar.transform.rotation = ABTransform.rotation;
         WrapBar.GetComponent<RadialView>().enabled = ActiveBar.GetComponent<RadialView>().enabled;

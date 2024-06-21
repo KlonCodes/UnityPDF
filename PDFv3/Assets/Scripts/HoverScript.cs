@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using MixedReality.Toolkit;
+using Unity.VisualScripting;
 
 public class HoverScript : MonoBehaviour
 {
@@ -87,11 +88,12 @@ public class HoverScript : MonoBehaviour
         PageHandler pgs = Reader.GetComponent<PageHandler>();
 
         string pName = gameObject.name[2..];
-        int pNum = int.Parse(pName)-1;
-
+        int pNum = int.Parse(pName);
+        pNum -= 1;
+        Debug.Log(pNum);
         pgs.SetImage(pNum);
         quickSP();
-        pgs.GridToggle();
+        pgs.Toggler();
 
 
     }
