@@ -15,6 +15,9 @@ public class PageHandler : MonoBehaviour
     public GameObject pageGrid;
     public GameObject pageWrap;
 
+    public GameObject UIbar;
+    public GameObject UIPad;
+
     public Camera mainCamera = Camera.main;
 
     public PageHandler(Camera mainCamera)
@@ -58,6 +61,11 @@ public class PageHandler : MonoBehaviour
         }
     }
 
+    public void InputToggle()
+    {
+       UIbar.SetActive(!UIbar.activeSelf);
+       UIPad.SetActive(!UIPad.activeSelf);
+    }
     public void GridToggle()
     {
         ViewToggle(pageGrid, planeD);

@@ -6,7 +6,7 @@ using UnityEngine;
 public class HandButtons : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject ButtonBar;
+    public GameObject InputBar;
     public GameObject SlideBar;
     public GameObject SFTBar;
     public GameObject WrapBar;
@@ -27,7 +27,7 @@ public class HandButtons : MonoBehaviour
     void Update()
     {
     }
-    public void ActButton()
+    public void ActInput()
     {
         GetActiveBar();
         closePanes();
@@ -35,18 +35,18 @@ public class HandButtons : MonoBehaviour
         SlideBar.SetActive(false);
         SFTBar.SetActive(false);
         WrapBar.SetActive(false);
-        ButtonBar.SetActive(true);
+        InputBar.SetActive(true);
 
-        ButtonBar.transform.position = ABTransform.position;
-        ButtonBar.transform.rotation = ABTransform.rotation;
-        ButtonBar.GetComponent<RadialView>().enabled = ActiveBar.GetComponent<RadialView>().enabled;
+        InputBar.transform.position = ABTransform.position;
+        InputBar.transform.rotation = ABTransform.rotation;
+        InputBar.GetComponent<RadialView>().enabled = ActiveBar.GetComponent<RadialView>().enabled;
 
     }
     public void ActSlide()
     {
         GetActiveBar();
         closePanes();
-        ButtonBar.SetActive(false);
+        InputBar.SetActive(false);
         SFTBar.SetActive(false);
         WrapBar.SetActive(false);
         SlideBar.SetActive(true);
@@ -59,7 +59,7 @@ public class HandButtons : MonoBehaviour
     {
         GetActiveBar();
         closePanes();
-        ButtonBar.SetActive(false);
+        InputBar.SetActive(false);
         SlideBar.SetActive(false);
         WrapBar.SetActive(false);
         SFTBar.SetActive(true);
@@ -76,7 +76,7 @@ public class HandButtons : MonoBehaviour
         WrapBar.transform.rotation = ABTransform.rotation;
         WrapBar.GetComponent<RadialView>().enabled = ActiveBar.GetComponent<RadialView>().enabled;
 
-        ButtonBar.SetActive(false);
+        InputBar.SetActive(false);
         SlideBar.SetActive(false);
         SFTBar.SetActive(false);
         WrapBar.SetActive(true);
@@ -91,8 +91,8 @@ public class HandButtons : MonoBehaviour
     // Call this method to check which bar is active
     public GameObject CheckActiveBar()
     {
-        if (ButtonBar.activeSelf)
-            return ButtonBar;
+        if (InputBar.activeSelf)
+            return InputBar;
         else if (SlideBar.activeSelf)
             return SlideBar;
         else if (SFTBar.activeSelf)
@@ -100,8 +100,8 @@ public class HandButtons : MonoBehaviour
         else if (WrapBar.activeSelf)
             return WrapBar;
         else
-            ButtonBar.SetActive(true);
-        return ButtonBar;
+            InputBar.SetActive(true);
+        return InputBar;
     }
 }
 
